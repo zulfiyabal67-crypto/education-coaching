@@ -125,6 +125,28 @@
       <div class="program-close-row"><button type="button" class="program-close" id="close-leadership">Свернуть раздел <span aria-hidden="true">↑</span></button></div>
     </div>
   </section>
+  <section class="programs teachers-section" id="teachers" hidden>
+    <div class="wrap">
+      <div class="section-head program-heading"><div class="kicker">Направление работы</div><h2>Развитие педагогов</h2></div>
+      <div class="program-layout">
+        <div>
+          <p class="program-lead">Профессиональное развитие педагога начинается с внимания к собственному опыту, ресурсам и задачам.</p>
+          <p class="program-intro">Современная образовательная среда требует не только предметных знаний, но и способности осмыслять профессиональные ситуации, адаптироваться к изменениям, выстраивать взаимодействие и самостоятельно определять направления роста. Это направление помогает педагогам исследовать свой опыт и находить практические решения для профессиональных задач.</p>
+          <p class="program-audience"><strong>Для кого:</strong> учителя, преподаватели, воспитатели, методисты и другие специалисты, работающие в сфере образования.</p>
+        </div>
+        <div class="program-panel">
+          <h3>Основные направления развития</h3>
+          <div class="program-list">
+            <div class="program-item"><h3>Профессиональная рефлексия</h3><p>Анализ опыта, сложных ситуаций и собственных способов действовать.</p></div>
+            <div class="program-item"><h3>Самокоучинг в работе</h3><p>Инструменты для прояснения задач, поиска ресурсов и планирования следующих шагов.</p></div>
+            <div class="program-item"><h3>Эмоциональная саморегуляция</h3><p>Осознанное отношение к эмоциональным реакциям и поддержание профессиональных границ.</p></div>
+            <div class="program-item"><h3>Профессиональная устойчивость</h3><p>Индивидуальные способы сохранять работоспособность и адаптироваться к изменениям.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="program-close-row"><button type="button" class="program-close" id="close-teachers">Свернуть раздел <span aria-hidden="true">↑</span></button></div>
+    </div>
+  </section>
   <section class="programs" id="programs" hidden>
     <div class="wrap">
       <div class="section-head program-heading"><div class="kicker">Образовательная программа</div><h2>Самокоучинг для педагогов</h2></div>
@@ -187,6 +209,13 @@
   leadershipCard.addEventListener('click',openLeadership);
   closeLeadership.addEventListener('click',()=>{leadershipSection.hidden=true;leadershipCard.setAttribute('aria-expanded','false');leadershipCard.scrollIntoView({behavior:'smooth',block:'center'});});
   leadershipCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLeadership();}});
+  const teachersCard=document.getElementById('teachers-card');
+  const teachersSection=document.getElementById('teachers');
+  const closeTeachers=document.getElementById('close-teachers');
+  function openTeachers(){teachersSection.hidden=false;teachersCard.setAttribute('aria-expanded','true');teachersSection.scrollIntoView({behavior:'smooth',block:'start'});}
+  teachersCard.addEventListener('click',openTeachers);
+  closeTeachers.addEventListener('click',()=>{teachersSection.hidden=true;teachersCard.setAttribute('aria-expanded','false');teachersCard.scrollIntoView({behavior:'smooth',block:'center'});});
+  teachersCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openTeachers();}});
   const programCard=document.getElementById('program-card');
   const programSection=document.getElementById('programs');
    const closeProgram=document.getElementById('close-program');
