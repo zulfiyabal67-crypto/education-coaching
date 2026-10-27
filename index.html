@@ -76,7 +76,7 @@
       <div class="cards">
         <article class="card" id="selfcoaching-card" role="button" tabindex="0" aria-controls="selfcoaching" aria-expanded="false"><div class="number">01</div><h3>Самокоучинг</h3><p>Практики самоанализа, постановки целей и осознанного принятия решений для личного и профессионального развития.</p><span class="card-action">Подробнее о подходе <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
         <article class="card"><div class="number">02</div><h3>Развитие педагогов</h3><p>Поддержка профессионального роста, развитие компетенций и поиск новых ресурсов для работы в меняющейся образовательной среде.</p></article>
-        <article class="card"><div class="number">03</div><h3>Образовательное лидерство</h3><p>Коучинговый подход к коммуникации, командному взаимодействию, лидерству и развитию образовательных организаций.</p></article>
+        <article class="card" id="leadership-card" role="button" tabindex="0" aria-controls="leadership" aria-expanded="false"><div class="number">03</div><h3>Образовательное лидерство</h3><p>Коучинговый подход к коммуникации, командному взаимодействию, лидерству и развитию образовательных организаций.</p><span class="card-action">Подробнее о направлении <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
         <article class="card" id="program-card" role="button" tabindex="0" aria-controls="programs" aria-expanded="false"><div class="number">04</div><h3>Образовательные программы</h3><p>Практические форматы обучения для личного и профессионального развития.</p><span class="card-action">Открыть программы <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
       </div>
     </div>
@@ -101,6 +101,28 @@
         </div>
       </div>
       <div class="program-close-row"><button type="button" class="program-close" id="close-selfcoaching">Свернуть раздел <span aria-hidden="true">↑</span></button></div>
+    </div>
+  </section>
+  <section class="programs leadership-section" id="leadership" hidden>
+    <div class="wrap">
+      <div class="section-head program-heading"><div class="kicker">Направление работы</div><h2>Образовательное лидерство</h2></div>
+      <div class="program-layout">
+        <div>
+          <p class="program-lead">Развитие образовательной среды начинается с диалога, доверия и готовности учиться вместе.</p>
+          <p class="program-intro">Образовательное лидерство — это подход к развитию людей и команд, в котором важны осознанные решения, конструктивная коммуникация и совместная ответственность. Коучинговые инструменты помогают прояснять задачи, слышать разные точки зрения и находить решения с опорой на ресурсы команды.</p>
+          <p class="program-audience"><strong>Для кого:</strong> руководители образовательных организаций, управленческие команды, педагоги и специалисты, участвующие в развитии образовательных проектов.</p>
+        </div>
+        <div class="program-panel">
+          <h3>Ключевые направления</h3>
+          <div class="program-list">
+            <div class="program-item"><h3>Осознанное лидерство</h3><p>Прояснение ценностей, приоритетов и ответственности в руководящей роли.</p></div>
+            <div class="program-item"><h3>Коммуникация и диалог</h3><p>Активное слушание, вопросы, обратная связь и обсуждение сложных ситуаций.</p></div>
+            <div class="program-item"><h3>Командное взаимодействие</h3><p>Выявление сильных сторон, ресурсов и возможностей для совместной работы.</p></div>
+            <div class="program-item"><h3>Решения и развитие</h3><p>Переход от обсуждения проблемы к согласованным действиям и реалистичным следующим шагам.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="program-close-row"><button type="button" class="program-close" id="close-leadership">Свернуть раздел <span aria-hidden="true">↑</span></button></div>
     </div>
   </section>
   <section class="programs" id="programs" hidden>
@@ -158,6 +180,13 @@
   selfcoachingCard.addEventListener('click',openSelfcoaching);
   closeSelfcoaching.addEventListener('click',()=>{selfcoachingSection.hidden=true;selfcoachingCard.setAttribute('aria-expanded','false');selfcoachingCard.scrollIntoView({behavior:'smooth',block:'center'});});
   selfcoachingCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openSelfcoaching();}});
+  const leadershipCard=document.getElementById('leadership-card');
+  const leadershipSection=document.getElementById('leadership');
+  const closeLeadership=document.getElementById('close-leadership');
+  function openLeadership(){leadershipSection.hidden=false;leadershipCard.setAttribute('aria-expanded','true');leadershipSection.scrollIntoView({behavior:'smooth',block:'start'});}
+  leadershipCard.addEventListener('click',openLeadership);
+  closeLeadership.addEventListener('click',()=>{leadershipSection.hidden=true;leadershipCard.setAttribute('aria-expanded','false');leadershipCard.scrollIntoView({behavior:'smooth',block:'center'});});
+  leadershipCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLeadership();}});
   const programCard=document.getElementById('program-card');
   const programSection=document.getElementById('programs');
    const closeProgram=document.getElementById('close-program');
