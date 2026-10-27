@@ -63,6 +63,32 @@
     .programs .program-heading .kicker{font-size:clamp(17px,2.2vw,21px);letter-spacing:.12em;color:var(--navy)}
     .programs .program-heading h2{color:var(--coral);font-size:clamp(30px,3.6vw,40px);margin-top:10px}
 
+
+    /* Аккуратная адаптация схемы в первом экране: круг и подписи остаются на своих местах */
+    .visual{min-width:0;width:100%;overflow:visible}
+    .orbit{width:min(300px,calc(100vw - 64px));height:auto;aspect-ratio:1;transform:none;flex-shrink:0}
+    .core{width:43%;height:auto;aspect-ratio:1;border-radius:28%;font-size:clamp(11px,1.2vw,14px)}
+    .node{width:clamp(60px,6.7vw,76px);height:auto;aspect-ratio:1;border-radius:18px;font-size:clamp(9px,1vw,11px)}
+    .node.one{top:-2.5%;left:calc(50% - 38px)}
+    .node.two{right:-2.5%;top:calc(50% - 38px)}
+    .node.three{bottom:-2.5%;left:calc(50% - 38px)}
+    .node.four{left:-2.5%;top:calc(50% - 38px)}
+    @media(max-width:850px){
+      .visual{min-height:0;padding:12px 0 18px}
+      .orbit{width:min(280px,calc(100vw - 64px))}
+      .node{width:66px;font-size:9.5px}
+      .node.one,.node.three{left:calc(50% - 33px)}
+      .node.two,.node.four{top:calc(50% - 33px)}
+    }
+    @media(max-width:620px){
+      .visual{min-height:0;padding:12px 0 18px}
+      .orbit{width:min(250px,calc(100vw - 64px))}
+      .node{width:62px;border-radius:16px;font-size:9px;padding:6px}
+      .node.one,.node.three{left:calc(50% - 31px)}
+      .node.two,.node.four{top:calc(50% - 31px)}
+      .core{font-size:11px}
+    }
+
     </style>
 </head>
 <body>
