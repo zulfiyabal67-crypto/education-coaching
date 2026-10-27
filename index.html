@@ -213,9 +213,13 @@
   const teachersSection=document.getElementById('teachers');
   const closeTeachers=document.getElementById('close-teachers');
   function openTeachers(){teachersSection.hidden=false;teachersCard.setAttribute('aria-expanded','true');teachersSection.scrollIntoView({behavior:'smooth',block:'start'});}
-  teachersCard.addEventListener('click',openTeachers);
-  closeTeachers.addEventListener('click',()=>{teachersSection.hidden=true;teachersCard.setAttribute('aria-expanded','false');teachersCard.scrollIntoView({behavior:'smooth',block:'center'});});
-  teachersCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openTeachers();}});
+  if(teachersCard && teachersSection && closeTeachers){
+    teachersCard.addEventListener('click',openTeachers);
+    const teachersAction=teachersCard.querySelector('.card-action');
+    if(teachersAction) teachersAction.addEventListener('click',e=>{e.preventDefault();openTeachers();});
+    closeTeachers.addEventListener('click',()=>{teachersSection.hidden=true;teachersCard.setAttribute('aria-expanded','false');teachersCard.scrollIntoView({behavior:'smooth',block:'center'});});
+    teachersCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openTeachers();}});
+  }
   const programCard=document.getElementById('program-card');
   const programSection=document.getElementById('programs');
    const closeProgram=document.getElementById('close-program');
