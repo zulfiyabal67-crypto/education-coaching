@@ -82,6 +82,14 @@
     @media(max-width:850px){.credentials-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:620px){.credentials-grid{grid-template-columns:1fr}.credential-card{padding:22px}}
 
+    
+    .zenodo{background:linear-gradient(180deg,#fff 0%,#f7f9ff 100%)}
+    .zenodo-links{display:flex;flex-wrap:wrap;gap:14px}
+    .zenodo-link{display:flex;flex-direction:column;gap:8px;min-width:min(100%,300px);flex:1;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;color:var(--navy);box-shadow:0 6px 18px rgba(23,37,84,.04)}
+    .zenodo-link strong{font-size:14px}
+    .zenodo-link span{font-size:13px;color:var(--blue);font-weight:750;overflow-wrap:anywhere}
+    .zenodo-link:hover{border-color:var(--teal)}
+
     </style>
 </head>
 <body>
@@ -165,6 +173,27 @@
           <div class="book-cover"><img src="Книга%204.png" alt="Cover of “Anti-Goal”" loading="lazy"></div>
           <div class="book-info"><span class="book-label">Original Method</span><h3>Anti-Goal</h3></div>
         </article>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="zenodo" id="publications">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Open Science</div>
+        <h2>Research Publications on Zenodo</h2>
+        <p>Access these publications through their permanent digital object identifiers (DOIs).</p>
+      </div>
+      <div class="zenodo-links">
+        <a class="zenodo-link" href="https://doi.org/10.5281/zenodo.20307326" target="_blank" rel="noopener noreferrer">
+          <strong>Open publication on Zenodo ↗</strong>
+          <span>DOI: 10.5281/zenodo.20307326</span>
+        </a>
+        <a class="zenodo-link" href="https://doi.org/10.5281/zenodo.19691172" target="_blank" rel="noopener noreferrer">
+          <strong>Open publication on Zenodo ↗</strong>
+          <span>DOI: 10.5281/zenodo.19691172</span>
+        </a>
       </div>
     </div>
   </section>
