@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102c46">
+  <meta name="description" content="EDUCATION & COACHING — an international educational project focused on self-coaching, teachers’ professional development, and a coaching approach to education.">
+  <title>EDUCATION & COACHING — Human Development, Educational Development</title>
+  <style>
+    :root{--navy:#172554;--blue:#3659f5;--teal:#00c9b7;--mint:#e4fbf7;--ink:#203047;--muted:#596982;--paper:#f7f9ff;--white:#fff;--line:#dce4f5;--coral:#ff6b6b;--lavender:#eeeaff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--white);line-height:1.65}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1140px,calc(100% - 44px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(224,233,239,.85)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.08em;color:var(--navy);font-size:14px}.brand-mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--teal),var(--blue));display:grid;place-items:center;color:#fff;font-size:18px;letter-spacing:0}.brand>span:last-child{line-height:1.1}
+    .links{display:flex;gap:27px;align-items:center;font-size:13px;font-weight:650;color:#496074}.links a:hover{color:var(--teal)}.nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:8px;background:var(--teal);color:#fff;font-weight:750;font-size:14px;transition:.2s}.nav-cta:hover,.button:hover{background:#178a86;transform:translateY(-1px)}
+    .menu{display:none;background:none;border:0;color:var(--navy);font-size:26px;cursor:pointer}
+    .hero{overflow:hidden;position:relative;background:radial-gradient(ellipse at 82% 15%,rgba(33,166,161,.22),transparent 34%),linear-gradient(120deg,#f6fbfc 0%,#edf6f9 55%,#e4f4f2 100%);padding:100px 0 94px}
+    .hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(31,85,120,.13);border-radius:50%;right:-100px;bottom:-250px;box-shadow:0 0 0 50px rgba(31,85,120,.025),0 0 0 100px rgba(31,85,120,.02)}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center;position:relative;z-index:1}
+    .eyebrow{display:inline-flex;gap:9px;align-items:center;text-transform:uppercase;letter-spacing:.16em;color:var(--blue);font-size:11px;font-weight:800}.eyebrow:before{content:"";width:24px;height:2px;background:var(--teal)}
+    h1{font-size:clamp(42px,5.4vw,70px);line-height:1.05;letter-spacing:-.045em;color:var(--navy);margin:22px 0}.hero h1 span{color:var(--teal);font-size:1em;white-space:nowrap}.lead{font-size:18px;color:#526a7c;max-width:650px;margin:0 0 30px}.hero-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}.text-link{font-size:14px;font-weight:750;color:var(--navy)}.text-link span{color:var(--teal);padding-left:5px}
+    .visual{min-height:340px;display:grid;place-items:center;position:relative}.orbit{width:300px;height:300px;border:1px solid rgba(31,85,120,.2);border-radius:50%;display:grid;place-items:center;position:relative}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(33,166,161,.25);border-radius:50%}.orbit:before{inset:28px}.orbit:after{inset:62px}.core{width:130px;height:130px;border-radius:36px;background:linear-gradient(145deg,var(--navy),var(--blue));color:white;display:grid;place-items:center;text-align:center;box-shadow:0 20px 55px rgba(16,44,70,.22);z-index:1;font-weight:800;letter-spacing:.08em;font-size:14px}.node{position:absolute;width:76px;height:76px;border-radius:22px;background:white;box-shadow:0 12px 30px rgba(16,44,70,.1);display:grid;place-items:center;text-align:center;font-size:11px;font-weight:800;color:var(--blue);line-height:1.3;padding:8px}.node.one{top:-8px;left:110px}.node.two{right:-8px;top:116px}.node.three{bottom:-8px;left:110px}.node.four{left:-8px;top:116px}
+    section{padding:88px 0}.section-head{max-width:700px;margin-bottom:38px}.kicker{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);font-weight:850}.section-head h2{font-size:clamp(30px,4vw,44px);line-height:1.15;letter-spacing:-.035em;color:var(--navy);margin:12px 0 16px}.section-head p{color:var(--muted);font-size:16px;margin:0}
+    .intro-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}.statement{font-size:25px;line-height:1.42;letter-spacing:-.02em;color:var(--navy);font-weight:700;margin:0}.intro-copy p{margin:0 0 16px;color:var(--muted)}
+    .author{background:radial-gradient(ellipse at 82% 15%,rgba(0,191,166,.18),transparent 34%),linear-gradient(120deg,#f6fbfc 0%,#edf6f9 55%,#e4f4f2 100%)}.author-grid{display:grid;grid-template-columns:180px 1fr;gap:32px;align-items:center;max-width:920px;margin:auto}.author-photo{width:100%;height:230px;object-fit:cover;object-position:center 25%;border-radius:16px;box-shadow:0 16px 38px rgba(16,44,70,.12)}.author-copy h2{font-size:clamp(30px,4vw,42px);line-height:1.15;color:var(--navy);letter-spacing:-.035em;margin:10px 0 8px}.author-role{font-weight:750;color:var(--blue);margin:0 0 18px}.author-copy p{color:var(--muted);margin:0 0 14px}
+    @media(max-width:620px){.author-grid{grid-template-columns:1fr;gap:25px}.author-photo{height:240px;max-width:220px}}
+    .directions{background:var(--paper)}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{padding:30px;background:white;border:1px solid var(--line);border-radius:14px;min-height:220px;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(16,44,70,.07)}.number{width:40px;height:40px;border-radius:12px;background:var(--mint);color:var(--teal);display:grid;place-items:center;font-weight:850;font-size:13px}.card h3{color:var(--navy);font-size:21px;margin:20px 0 9px}.card p{color:var(--muted);font-size:14px;margin:0}.card-action{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:22px;color:var(--blue);font-size:13px;font-weight:750}.card-action .arrow-circle{width:34px;height:34px;flex:0 0 34px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--teal);font-size:17px;transition:background .2s,border-color .2s,transform .2s}.card[role="button"]:hover .arrow-circle{background:var(--mint);border-color:var(--teal);transform:translate(2px,-2px)}
+    .programs{background:#fff}.programs[hidden]{display:none}.selfcoaching-section{background:#fff}.teachers-section{background:#f0f6ff}.programs .section-head{margin-bottom:20px}.program-heading{text-align:center;max-width:none}.program-heading h2{margin-left:auto;margin-right:auto}.card[role="button"]{cursor:pointer}.card[role="button"]:focus-visible{outline:3px solid var(--teal);outline-offset:3px}.program-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:start}.program-layout>div:first-child{padding-top:0}.program-lead{font-size:17px;line-height:1.5;color:var(--navy);margin:0 0 18px}.program-intro{font-size:16px;color:var(--muted);max-width:720px;margin:0}.program-panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px}.program-panel h3{color:var(--navy);margin:0 0 16px;font-size:20px}.program-list{display:grid;gap:18px}.program-item h3{color:var(--navy);font-size:17px;margin:0 0 5px}.program-item p{color:var(--muted);font-size:14px;margin:0}.program-hours{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.program-hours span{background:var(--mint);color:var(--navy);padding:10px 14px;border-radius:8px;font-weight:750;font-size:13px}.program-audience{margin-top:24px;color:var(--muted)}.program-close-row{display:flex;justify-content:flex-end;margin-top:28px}.program-close{border:0;background:transparent;color:var(--blue);font:inherit;font-size:14px;font-weight:750;cursor:pointer;padding:10px 0;transition:color .2s}.program-close:hover{color:var(--teal)}.program-close span{display:inline-block;margin-left:5px;transition:transform .2s}.program-close:hover span{transform:translateY(-3px)}.approach-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.approach-panel{padding:34px;border-radius:16px;background:var(--navy);color:white;position:relative;overflow:hidden}.approach-panel:after{content:"";position:absolute;width:220px;height:220px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-90px;bottom:-120px;box-shadow:0 0 0 32px rgba(255,255,255,.025),0 0 0 65px rgba(255,255,255,.02)}.approach-panel h3{font-size:25px;line-height:1.3;margin:0 0 18px;position:relative;z-index:1}.approach-panel p{color:#c5d7e2;margin:0;position:relative;z-index:1}.principles{display:grid;gap:22px}.principle{display:grid;grid-template-columns:32px 1fr;gap:14px}.check{color:var(--teal);font-size:20px;font-weight:900}.principle h3{font-size:16px;color:var(--navy);margin:0 0 4px}.principle p{font-size:14px;color:var(--muted);margin:0}
+    .expo{background:linear-gradient(120deg,#edf7f8,#f6fafc);padding:64px 0}.expo-box{display:flex;justify-content:space-between;align-items:center;gap:35px}.expo h2{color:var(--navy);font-size:clamp(26px,3.4vw,38px);line-height:1.2;margin:12px 0}.expo p{color:var(--muted);margin:0;max-width:670px}.expo-date{flex-shrink:0;border-left:3px solid var(--teal);padding:10px 0 10px 22px;color:var(--navy);font-weight:800}.expo-date strong{display:block;font-size:23px}.expo-date span{font-size:13px;color:var(--muted);font-weight:600}
+    .closing{padding:75px 0;background:var(--navy);color:white;text-align:center}.closing h2{font-size:clamp(30px,4vw,45px);letter-spacing:-.035em;line-height:1.15;margin:0 auto 18px;max-width:760px}.closing p{color:#c5d7e2;max-width:650px;margin:0 auto 26px}.closing .button{background:var(--teal)}
+    .contact-links{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:14px;margin:30px auto 28px}
+    .contact-link{display:inline-flex;align-items:center;gap:10px;padding:11px 16px;border:1px solid rgba(255,255,255,.22);border-radius:12px;color:#fff;font-size:14px;font-weight:700;transition:transform .2s,background .2s,border-color .2s}
+    .contact-link:hover{transform:translateY(-3px);background:rgba(255,255,255,.10);border-color:var(--teal)}
+    .contact-icon{width:32px;height:32px;display:grid;place-items:center;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--teal));color:white;font-size:19px;font-weight:850;line-height:1}
+    .contact-link:nth-child(3) .contact-icon{background:linear-gradient(135deg,#f77737,#c13584,#5851db)}
+    .contact-link:nth-child(4) .contact-icon{background:#1877f2}
+    @media(max-width:620px){.contact-links{gap:10px}.contact-link{padding:9px 12px;font-size:13px}}
+    footer{padding:25px 0;background:#0b2135;color:#a9bfce;font-size:12px}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-brand{font-weight:800;letter-spacing:.1em;color:white}
+    @media(max-width:850px){.program-layout{grid-template-columns:1fr;gap:28px}.program-layout>div:first-child{padding-top:0}.links{gap:14px}.links a{font-size:12px}.nav-cta{display:none}.hero-grid{grid-template-columns:1fr;gap:25px}.hero{padding:75px 0 50px}.visual{min-height:300px}.orbit{transform:scale(.88)}.intro-grid,.approach-grid{grid-template-columns:1fr;gap:30px}.expo-box{align-items:flex-start;flex-direction:column}.expo-date{border-left:3px solid var(--teal)}}
+    @media(max-width:620px){.wrap{width:min(100% - 32px,1140px)}.nav{height:68px}.menu{display:block}.links{display:none;position:absolute;top:68px;left:0;right:0;background:white;padding:18px 24px 24px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:18px}.links.open{display:flex}.hero{padding:60px 0 35px}h1{font-size:43px}.lead{font-size:16px}.visual{min-height:250px}.orbit{transform:scale(.72)}section{padding:64px 0}.cards{grid-template-columns:1fr}.card{min-height:0}.statement{font-size:22px}.approach-panel{padding:27px}.footer-row{flex-direction:column;align-items:flex-start;gap:8px}}
+
+    /* Яркая, современная палитра для образовательного Expo */
+    .hero{background:radial-gradient(ellipse at 84% 14%,rgba(0,201,183,.32),transparent 35%),radial-gradient(ellipse at 10% 90%,rgba(255,107,107,.12),transparent 34%),linear-gradient(120deg,#f5f7ff 0%,#eaf7ff 52%,#e1fbf4 100%)}
+    .hero h1 span{color:var(--coral)}
+    .eyebrow:before{background:var(--coral)}
+    .nav-cta,.button{background:linear-gradient(115deg,var(--blue),var(--teal));box-shadow:0 8px 20px rgba(54,89,245,.16)}
+    .nav-cta:hover,.button:hover{background:linear-gradient(115deg,#2846d5,#00a997)}
+    .number{background:#e7eaff;color:var(--blue)}
+    .card:nth-child(2) .number{background:#ffe8e5;color:#e65b5b}
+    .card:nth-child(3) .number{background:#ddfaf3;color:#008f83}
+    .card:nth-child(4) .number{background:#eeeaff;color:#7555d9}
+    .card{border-color:#e0e6f7;box-shadow:0 5px 18px rgba(23,37,84,.025)}
+    .card:hover{border-color:rgba(54,89,245,.35);box-shadow:0 18px 40px rgba(54,89,245,.10)}
+    .card-action .arrow-circle{color:var(--coral)}
+    .card[role="button"]:hover .arrow-circle{background:#fff0ee;border-color:var(--coral)}
+    .author{background:radial-gradient(ellipse at 82% 15%,rgba(0,201,183,.20),transparent 34%),linear-gradient(120deg,#f5f7ff 0%,#eaf7ff 55%,#e1fbf4 100%)}
+    .directions{background:linear-gradient(180deg,#f7f9ff 0%,#f1f7ff 100%)}
+    .teachers-section{background:linear-gradient(120deg,#eef4ff,#f4f0ff)}
+    .expo{background:radial-gradient(ellipse at 90% 15%,rgba(0,201,183,.22),transparent 36%),linear-gradient(120deg,#edf2ff,#e9fbf7)}
+    .expo-date{border-left-color:var(--coral)}
+    .kicker{color:#008f83}
+    .programs .program-heading .kicker{font-size:clamp(17px,2.2vw,21px);letter-spacing:.12em;color:var(--navy)}
+    .programs .program-heading h2{color:var(--coral);font-size:clamp(30px,3.6vw,40px);margin-top:10px}
+
+    </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="EDUCATION & COACHING — Home"><span class="brand-mark">E&amp;C</span><span>EDUCATION<br>& COACHING</span></a>
+    <button class="menu" aria-label="Open menu" aria-expanded="false" id="menuBtn">☰</button>
+    <nav class="links" id="navLinks" aria-label="Main navigation">
+      <a href="author.html">About the Author</a><a href="#about">About the Project</a><a href="#directions">Areas of Work</a><a href="#approach">Our Approach</a><a href="#expo">Expo 2026</a>
+    </nav>
+    <a class="nav-cta" href="#collaboration">Collaboration ↗</a>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">International Educational Project</div>
+        <h1>Human Development.<br><span>Educational Development.</span></h1>
+        <p class="lead">We bring together self-coaching, teachers’ professional development, and a coaching approach to help people realise their potential and create positive change in education.</p>
+        <div class="hero-actions"><a class="button" href="#directions">Explore the Project ↗</a><a class="text-link" href="#about">Discover the Project <span>↓</span></a></div>
+      </div>
+      <div class="visual" aria-label="Four areas of development centred on people">
+        <div class="orbit"><div class="core">HUMAN<br>GROWTH</div><div class="node one">SELF-<br>COACHING</div><div class="node two">LEADER-<br>SHIP</div><div class="node three">TEACHER<br>DEVELOPMENT</div><div class="node four">EDU-<br>CATION</div></div>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="wrap intro-grid">
+      <div><div class="kicker">About the Project</div><p class="statement">Education begins with people—with their thinking, awareness, and willingness to grow.</p></div>
+      <div class="intro-copy"><p><strong>EDUCATION & COACHING</strong> is an international educational project connecting contemporary approaches to personal and professional development with the practical needs of the education sector.</p><p>We see development as a continuous process—from understanding personal goals and strengths to strengthening professional competencies, leadership, and the creation of a supportive educational environment.</p><p>The project welcomes the exchange of experience, professional dialogue, and international collaboration.</p></div>
+    </div>
+  </section>
+<section class="directions" id="directions">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Areas of Work работы</div><h2>Tools for Growth<br>at Every Level of Education</h2><p>Four interconnected areas support the development of individuals, professionals, and educational communities.</p></div>
+      <div class="cards">
+        <article class="card" id="selfcoaching-card" role="button" tabindex="0" aria-controls="selfcoaching" aria-expanded="false"><div class="number">01</div><h3>Self-Coaching</h3><p>Practices in self-reflection, goal setting, and conscious decision-making for personal and professional development.</p><span class="card-action">Explore the Approach <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
+        <article class="card" id="teachers-card" role="button" tabindex="0" aria-controls="teachers" aria-expanded="false"><div class="number">02</div><h3>Teacher Development</h3><p>Support for professional growth, competency development, and finding new resources for working in a changing educational environment.</p><span class="card-action">Explore This Area <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
+        <article class="card" id="leadership-card" role="button" tabindex="0" aria-controls="leadership" aria-expanded="false"><div class="number">03</div><h3>Educational Leadership</h3><p>A Coaching Approach к коммуникации, командному взаимодействию, лидерству и развитию образовательных организаций.</p><span class="card-action">Explore This Area <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
+        <article class="card" id="program-card" role="button" tabindex="0" aria-controls="programs" aria-expanded="false"><div class="number">04</div><h3>Образовательные программы</h3><p>Практические форматы обучения для личного и профессионального развития.</p><span class="card-action">Открыть программы <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
+      </div>
+    </div>
+  </section>
+  <section class="programs selfcoaching-section" id="selfcoaching" hidden>
+    <div class="wrap">
+      <div class="section-head program-heading"><div class="kicker">Авторский подход</div><h2>Self-Coaching</h2></div>
+      <div class="program-layout">
+        <div>
+          <p class="program-lead">Изменения начинаются с ясного понимания себя и своей ситуации.</p>
+          <p class="program-intro">Self-Coaching — это способ самостоятельно исследовать профессиональные и личные вопросы, замечать привычные реакции, определять доступные ресурсы и выбирать реалистичные следующие шаги. Он помогает не искать готовые ответы извне, а осмысленно работать со своим опытом.</p>
+          <p class="program-audience"><strong>Who it is for:</strong> педагоги, преподаватели, руководители и все, кто заинтересован в личном и профессиональном развитии.</p>
+        </div>
+        <div class="program-panel">
+          <h3>The Anti-Goal Method</h3>
+          <p class="program-intro">This original approach to mindful change begins with the question: “What do I no longer want?” It helps identify what no longer works in familiar ways of acting and clarify what can be changed.</p>
+          <div class="program-list" style="margin-top:22px">
+            <div class="program-item"><h3>1. Notice</h3><p>Recognise what you no longer want to continue or maintain.</p></div>
+            <div class="program-item"><h3>2. Clarify</h3><p>Identify what is within your influence and which resources are available.</p></div>
+            <div class="program-item"><h3>3. Take a Step</h3><p>Choose one realistic action to begin changing the situation with care.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="program-close-row"><button type="button" class="program-close" id="close-selfcoaching">Collapse Section <span aria-hidden="true">↑</span></button></div>
+    </div>
+  </section>
+  <section class="programs leadership-section" id="leadership" hidden>
+    <div class="wrap">
+      <div class="section-head program-heading"><div class="kicker">Area of Work</div><h2>Educational Leadership</h2></div>
+      <div class="program-layout">
+        <div>
+          <p class="program-lead">A developing educational environment begins with dialogue, trust, and a willingness to learn together.</p>
+          <p class="program-intro">Educational Leadership — это подход к развитию людей и команд, в котором важны осознанные решения, конструктивная коммуникация и совместная ответственность. Коучинговые инструменты помогают прояснять задачи, слышать разные точки зрения и находить решения с опорой на ресурсы команды.</p>
+          <p class="program-audience"><strong>Who it is for:</strong> руководители образовательных организаций, управленческие команды, педагоги и специалисты, участвующие в развитии образовательных проектов.</p>
+        </div>
+        <div class="program-panel">
+          <h3>Key Focus Areas</h3>
+          <div class="program-list">
+            <div class="program-item"><h3>Mindful Leadership</h3><p>Clarifying values, priorities, and responsibilities in a leadership role.</p></div>
+            <div class="program-item"><h3>Communication and Dialogue</h3><p>Active listening, questioning, feedback, and discussing challenging situations.</p></div>
+            <div class="program-item"><h3>Teamwork</h3><p>Identifying strengths, resources, and opportunities for working together.</p></div>
+            <div class="program-item"><h3>Decisions and Development</h3><p>Moving from discussing a problem to agreed actions and realistic next steps.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="program-close-row"><button type="button" class="program-close" id="close-leadership">Collapse Section <span aria-hidden="true">↑</span></button></div>
+    </div>
+  </section>
+  <section class="programs teachers-section" id="teachers" hidden>
+    <div class="wrap">
+      <div class="section-head program-heading"><div class="kicker">Area of Work</div><h2>Teacher Development</h2></div>
+      <div class="program-layout">
+        <div>
+          <p class="program-lead">An educator’s professional development begins with attention to their own experience, resources, and goals.</p>
+          <p class="program-intro">Today’s educational environment requires more than subject knowledge. It also calls for the ability to reflect on professional situations, adapt to change, build relationships, and identify areas for growth. This area helps educators explore their experience and find practical solutions to professional challenges.</p>
+          <p class="program-audience"><strong>Who it is for:</strong> учителя, преподаватели, воспитатели, методисты и другие специалисты, работающие в сфере образования.</p>
+        </div>
+        <div class="program-panel">
+          <h3>Key Areas развития</h3>
+          <div class="program-list">
+            <div class="program-item"><h3>Professional Reflection</h3><p>Reviewing experience, challenging situations, and personal ways of responding.</p></div>
+            <div class="program-item"><h3>Self-Coaching в работе</h3><p>Инструменты для прояснения задач, поиска ресурсов и планирования следующих шагов.</p></div>
+            <div class="program-item"><h3>Emotional Self-Regulation</h3><p>Responding to emotions mindfully and maintaining professional boundaries.</p></div>
+            <div class="program-item"><h3>Professional Resilience</h3><p>Индивидуальные способы сохранять работоспособность и адаптироваться к изменениям.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="program-close-row"><button type="button" class="program-close" id="close-teachers">Collapse Section <span aria-hidden="true">↑</span></button></div>
+    </div>
+  </section>
+  <section class="programs" id="programs" hidden>
+    <div class="wrap">
+      <div class="section-head program-heading"><div class="kicker">Educational Programme</div><h2>Self-Coaching для педагогов</h2></div>
+      <div class="program-layout">
+        <div>
+          <p class="program-lead">Professional development begins with understanding yourself, reflecting on your experience, and finding solutions independently.</p>
+          <p class="program-intro">This programme develops professional reflection, self-regulation, and mindful management of one’s own development. It combines theory and practical tools that help educators analyse professional situations, identify available resources, and plan next steps.</p>
+          <div class="program-hours"><span>40 hours of learning</span><span>20 hours of theory</span><span>20 hours of practice</span></div>
+          <p class="program-audience"><strong>Who it is for:</strong> educators and teachers interested in professional development, reflecting on their experience, and learning self-coaching tools.</p>
+        </div>
+        <div class="program-panel">
+          <h3>Key Areas</h3>
+          <div class="program-list">
+            <div class="program-item"><h3>Professional Resilience</h3><p>Professional risks, factors contributing to emotional burnout, and ways to sustain personal resources.</p></div>
+            <div class="program-item"><h3>Self-Coaching Method</h3><p>A structured way to work independently with professional questions—from analysing a situation to choosing a solution and planning action.</p></div>
+            <div class="program-item"><h3>Awareness и внутренний диалог</h3><p>Examining habitual interpretations, cognitive distortions, and thinking patterns.</p></div>
+            <div class="program-item"><h3>Self-Regulation and Professional Boundaries</h3><p>Working with personal boundaries, emotional responses, and individual strategies for professional resilience.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="program-close-row"><button type="button" class="program-close" id="close-program">Collapse Programme <span aria-hidden="true">↑</span></button></div>
+    </div>
+  </section>
+  <section id="approach">
+    <div class="wrap approach-grid">
+      <div class="approach-panel"><h3>New Knowledge, New Opportunities</h3><p>Мы делаем акцент на осознанности, практическом применении инструментов и способности человека самостоятельно находить решения и двигаться к значимым целям.</p></div>
+      <div><div class="section-head"><div class="kicker">Our Approach</div><h2>Development That Matters</h2><p>At the heart of the project are people, their experience, and their ability to shape their own future.</p></div>
+        <div class="principles">
+          <div class="principle"><span class="check">✓</span><div><h3>Awareness</h3><p>We help clarify goals, recognise resources, and choose a direction.</p></div></div>
+          <div class="principle"><span class="check">✓</span><div><h3>Practicality</h3><p>We connect ideas and tools with real professional situations.</p></div></div>
+          <div class="principle"><span class="check">✓</span><div><h3>Collaboration</h3><p>We value dialogue, the exchange of experience, and collaborative problem-solving in education.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="expo" id="expo">
+    <div class="wrap expo-box"><div><div class="kicker">International Dialogue</div><h2>Meet Us at Expo in France</h2><p>We present educational ideas, professional practices, and opportunities for collaboration. The project welcomes dialogue with educators, educational organisations, and specialists interested in human development and the advancement of education.</p></div><div class="expo-date"><strong>2–4 декабря 2026</strong><span>France · Education Expo</span></div></div>
+  </section>
+  <section class="closing" id="collaboration">
+    <div class="wrap"><div class="kicker">Open to Collaboration</div><h2>Let us create opportunities for growth in education together.</h2><p>Exchanging experience, building professional connections, and launching joint initiatives help create an educational environment where people can grow and realise their potential.</p>
+      <div class="contact-links" aria-label="Контакты">
+        <a class="contact-link" href="mailto:zulfiyabal67@gmail.com" aria-label="Email: zulfiyabal67@gmail.com"><span class="contact-icon" aria-hidden="true">✉</span><span>Email</span></a>
+        <a class="contact-link" href="https://t.me/antigoalschool" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><span class="contact-icon" aria-hidden="true">➤</span><span>Telegram</span></a>
+        <a class="contact-link" href="https://www.instagram.com/zulfiya_islamova67/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="contact-icon" aria-hidden="true">◎</span><span>Instagram</span></a>
+        <a class="contact-link" href="https://www.facebook.com/share/19JZSg349d/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Найти страницу в Facebook"><span class="contact-icon" aria-hidden="true">f</span><span>Facebook</span></a>
+        <a class="contact-link" href="https://zulfiyaislamova.com/" target="_blank" rel="noopener noreferrer" aria-label="Авторский сайт"><span class="contact-icon" aria-hidden="true">↗</span><span>Website</span></a>
+      </div>
+      <a class="button" href="#top">Back to Top ↑</a></div>
+  </section>
+</main>
+<footer><div class="wrap footer-row"><div class="footer-brand">EDUCATION & COACHING</div><div>Human development — educational development.</div><div>© <span id="year"></span> EDUCATION & COACHING</div></div></footer>
+<script>
+  const menuBtn=document.getElementById('menuBtn');
+  const navLinks=document.getElementById('navLinks');
+  menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'×':'☰';});
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
+  const selfcoachingCard=document.getElementById('selfcoaching-card');
+  const selfcoachingSection=document.getElementById('selfcoaching');
+  const closeSelfcoaching=document.getElementById('close-selfcoaching');
+  function openSelfcoaching(){selfcoachingSection.hidden=false;selfcoachingCard.setAttribute('aria-expanded','true');selfcoachingSection.scrollIntoView({behavior:'smooth',block:'start'});}
+  selfcoachingCard.addEventListener('click',openSelfcoaching);
+  closeSelfcoaching.addEventListener('click',()=>{selfcoachingSection.hidden=true;selfcoachingCard.setAttribute('aria-expanded','false');selfcoachingCard.scrollIntoView({behavior:'smooth',block:'center'});});
+  selfcoachingCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openSelfcoaching();}});
+  const leadershipCard=document.getElementById('leadership-card');
+  const leadershipSection=document.getElementById('leadership');
+  const closeLeadership=document.getElementById('close-leadership');
+  function openLeadership(){leadershipSection.hidden=false;leadershipCard.setAttribute('aria-expanded','true');leadershipSection.scrollIntoView({behavior:'smooth',block:'start'});}
+  leadershipCard.addEventListener('click',openLeadership);
+  closeLeadership.addEventListener('click',()=>{leadershipSection.hidden=true;leadershipCard.setAttribute('aria-expanded','false');leadershipCard.scrollIntoView({behavior:'smooth',block:'center'});});
+  leadershipCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLeadership();}});
+  const teachersCard=document.getElementById('teachers-card');
+  const teachersSection=document.getElementById('teachers');
+  const closeTeachers=document.getElementById('close-teachers');
+  function openTeachers(){teachersSection.hidden=false;teachersCard.setAttribute('aria-expanded','true');teachersSection.scrollIntoView({behavior:'smooth',block:'start'});}
+  if(teachersCard && teachersSection && closeTeachers){
+    teachersCard.addEventListener('click',openTeachers);
+    const teachersAction=teachersCard.querySelector('.card-action');
+    if(teachersAction) teachersAction.addEventListener('click',e=>{e.preventDefault();openTeachers();});
+    closeTeachers.addEventListener('click',()=>{teachersSection.hidden=true;teachersCard.setAttribute('aria-expanded','false');teachersCard.scrollIntoView({behavior:'smooth',block:'center'});});
+    teachersCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openTeachers();}});
+  }
+  const programCard=document.getElementById('program-card');
+  const programSection=document.getElementById('programs');
+   const closeProgram=document.getElementById('close-program');
+  function openProgram(){programSection.hidden=false;programCard.setAttribute('aria-expanded','true');programSection.scrollIntoView({behavior:'smooth',block:'start'});}
+  programCard.addEventListener('click',openProgram);
+   closeProgram.addEventListener('click',()=>{programSection.hidden=true;programCard.setAttribute('aria-expanded','false');programCard.scrollIntoView({behavior:'smooth',block:'center'});});
+  programCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProgram();}});
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
