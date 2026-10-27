@@ -54,6 +54,19 @@
     .kicker{color:#008f83}
 
 
+
+    .books{background:#fff}
+    .books-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+    .book-card{min-width:0;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(23,37,84,.06);transition:transform .2s,box-shadow .2s}
+    .book-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(23,37,84,.12)}
+    .book-cover{height:280px;background:linear-gradient(135deg,#eef4ff,#e1fbf4);display:flex;align-items:center;justify-content:center;padding:14px}
+    .book-cover img{display:block;width:100%;height:100%;object-fit:contain}
+    .book-info{padding:20px}
+    .book-info h3{font-size:17px;line-height:1.4;color:var(--navy);margin:0}
+    .book-label{display:block;color:#008f83;text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:850;margin-bottom:9px}
+    @media(max-width:850px){.books-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.book-cover{height:300px}}
+    @media(max-width:620px){.books-grid{grid-template-columns:1fr 1fr;gap:12px}.book-cover{height:210px;padding:8px}.book-info{padding:14px}.book-info h3{font-size:14px}}
+
     .credentials{background:linear-gradient(180deg,#f7f9ff 0%,#eef9fb 100%)}
     .credentials-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
     .credential-card{display:flex;flex-direction:column;align-items:flex-start;gap:14px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 8px 24px rgba(23,37,84,.05)}
@@ -95,6 +108,34 @@
         <div class="author-copy"><div class="kicker">Об авторе проекта</div><h2>Зульфия Балгимбаева</h2><p class="author-role">Автор и руководитель проекта EDUCATION &amp; COACHING</p><p>Доктор психологических наук, исследователь, преподаватель педагогики и психологии, коуч.</p><p>Автор около 150 научных публикаций и четырёх монографий. Объединяю научные знания, педагогический опыт и коучинговые подходы для развития человека и совершенствования образования.</p><p>Особое направление моей работы — самокоучинг и профессиональное развитие педагогов.</p></div>
       </div>
     </section>
+
+  <section class="books" id="books">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Научные труды и авторские разработки</div>
+        <h2>Книги и монографии</h2>
+        <p>Издания, отражающие научные исследования и авторский подход к развитию человека.</p>
+      </div>
+      <div class="books-grid">
+        <article class="book-card">
+          <div class="book-cover"><img src="Книга%201.png" alt="Обложка книги «Культурно-философские основы гендерных предубеждений»" loading="lazy"></div>
+          <div class="book-info"><span class="book-label">Монография</span><h3>Культурно-философские основы гендерных предубеждений</h3></div>
+        </article>
+        <article class="book-card">
+          <div class="book-cover"><img src="Книга%202.png" alt="Обложка книги «Интегративная модель этнопсихологического субъекта. Персона. Интреперсона. Трансперсона»" loading="lazy"></div>
+          <div class="book-info"><span class="book-label">Монография</span><h3>Интегративная модель этнопсихологического субъекта. Персона. Интреперсона. Трансперсона</h3></div>
+        </article>
+        <article class="book-card">
+          <div class="book-cover"><img src="Книга%203.png" alt="Обложка книги «Психология гендерных предубеждений: история, теория и прикладные исследования»" loading="lazy"></div>
+          <div class="book-info"><span class="book-label">Монография</span><h3>Психология гендерных предубеждений: история, теория и прикладные исследования</h3></div>
+        </article>
+        <article class="book-card">
+          <div class="book-cover"><img src="Книга%204.png" alt="Обложка книги «Антицель»" loading="lazy"></div>
+          <div class="book-info"><span class="book-label">Авторская методика</span><h3>Антицель</h3></div>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <section class="credentials" id="credentials">
     <div class="wrap">
