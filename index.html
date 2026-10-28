@@ -36,7 +36,11 @@
     .contact-link:nth-child(3) .contact-icon{background:linear-gradient(135deg,#f77737,#c13584,#5851db)}
     .contact-link:nth-child(4) .contact-icon{background:#1877f2}
     @media(max-width:620px){.contact-links{gap:10px}.contact-link{padding:9px 12px;font-size:13px}}
-    footer{padding:25px 0;background:#0b2135;color:#a9bfce;font-size:12px}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-brand{font-weight:800;letter-spacing:.1em;color:white}
+    footer{padding:25px 0;background:#0b2135;color:#a9bfce;font-size:12px}
+    .footer-meta{display:flex;flex-direction:column;gap:4px;line-height:1.6}
+    .footer-meta strong{color:#fff;font-size:13px;font-weight:700}
+    .footer-meta a{color:#d7e5ed;text-decoration:none}
+    .footer-meta a:hover{text-decoration:underline}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-brand{font-weight:800;letter-spacing:.1em;color:white}
     @media(max-width:850px){.program-layout{grid-template-columns:1fr;gap:28px}.program-layout>div:first-child{padding-top:0}.links{gap:14px}.links a{font-size:12px}.nav-cta{display:none}.hero-grid{grid-template-columns:1fr;gap:25px}.hero{padding:75px 0 50px}.visual{min-height:300px}.orbit{transform:scale(.88)}.intro-grid,.approach-grid{grid-template-columns:1fr;gap:30px}.expo-box{align-items:flex-start;flex-direction:column}.expo-date{border-left:3px solid var(--teal)}}
     @media(max-width:620px){.wrap{width:min(100% - 32px,1140px)}.nav{height:68px}.menu{display:block}.links{display:none;position:absolute;top:68px;left:0;right:0;background:white;padding:18px 24px 24px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:18px}.links.open{display:flex}.hero{padding:60px 0 35px}h1{font-size:43px}.lead{font-size:16px}.visual{min-height:250px}.orbit{transform:scale(.72)}section{padding:64px 0}.cards{grid-template-columns:1fr}.card{min-height:0}.statement{font-size:22px}.approach-panel{padding:27px}.footer-row{flex-direction:column;align-items:flex-start;gap:8px}}
 
@@ -250,7 +254,16 @@
       <a class="button" href="#top">Вернуться к началу ↑</a></div>
   </section>
 </main>
-<footer><div class="wrap footer-row"><div class="footer-brand">EDUCATION & COACHING</div><div>Развитие человека — развитие образования.</div><div>© <span id="year"></span> EDUCATION & COACHING</div></div></footer>
+<footer><div class="wrap footer-row">
+  <div class="footer-brand">EDUCATION &amp; COACHING</div>
+  <div class="footer-meta">
+    <strong>Зульфия Исламова (Балгимбаева)</strong>
+    <span>Доктор психологических наук · Исследователь · Преподаватель · Коуч</span>
+    <span>Индивидуальный предприниматель, Республика Армения · ИНН: 20434413</span>
+    <a href="mailto:zulfiyabal67@gmail.com">zulfiyabal67@gmail.com</a>
+  </div>
+  <div>© <span id="year"></span> EDUCATION &amp; COACHING</div>
+</div></footer>
 <script>
   const menuBtn=document.getElementById('menuBtn');
   const navLinks=document.getElementById('navLinks');
