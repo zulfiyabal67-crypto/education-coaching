@@ -154,6 +154,13 @@
     @media(max-width:850px){.directions .cards{grid-template-columns:repeat(2,minmax(0,1fr))}.directions .card{min-height:245px}}
     @media(max-width:620px){.directions .section-head{margin-bottom:26px}.directions .cards{grid-template-columns:1fr;gap:15px}.directions .card{min-height:0;padding:25px 23px}.directions .card-action{padding-top:18px}}
 
+  
+    .application-steps{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin:28px 0;padding:18px 20px;background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:12px;color:var(--navy);font-size:13px}
+    .application-steps strong{width:100%;font-size:14px}.application-steps b{color:var(--teal)}
+    .application-form{max-width:760px;margin:0 auto 34px;padding:26px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 12px 34px rgba(16,44,70,.06);text-align:left}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.application-form label{display:flex;flex-direction:column;gap:7px;color:var(--navy);font-size:13px;font-weight:700}.application-form input,.application-form select,.application-form textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);font:inherit;font-weight:400}.application-form textarea{resize:vertical}.form-wide{grid-column:1/-1}.application-form button{border:0;cursor:pointer;margin-top:20px}.form-status{min-height:24px;margin:12px 0 0;color:var(--teal);font-weight:700;font-size:14px}
+    @media(max-width:620px){.application-form{padding:18px}.form-grid{grid-template-columns:1fr}.form-wide{grid-column:auto}.application-steps{align-items:flex-start;flex-direction:column}.application-steps b{display:none}}
+
   </style>
   <script type="application/ld+json">
   {
@@ -190,7 +197,7 @@
         <div class="eyebrow">Международный образовательный проект</div>
         <h1>Самокоучинг и<br><span>профессиональное<br>развитие педагогов</span></h1>
         <p class="lead">Программа для педагогов и преподавателей: анализ профессиональных ситуаций, саморегуляция и планирование развития.</p>
-        <div class="hero-actions"><a class="button" href="#directions">Подать заявку на программу ↗</a><a class="button" href="#collaboration">Заказать обучение для команды ↓</a></div>
+        <div class="hero-actions"><a class="button" href="#collaboration" data-request-type="Участие в программе">Подать заявку на программу ↗</a><a class="button" href="#collaboration" data-request-type="Обучение для организации">Заказать обучение для команды ↓</a></div>
       </div>
       <div class="visual" aria-label="Четыре направления развития вокруг человека">
         <div class="orbit"><div class="core">HUMAN<br>GROWTH</div><div class="node one">САМО-<br>КОУЧИНГ</div><div class="node two">ЛИДЕР-<br>СТВО</div><div class="node three">РАЗВИТИЕ<br>ПЕДАГОГОВ</div><div class="node four">ОБРАЗО-<br>ВАНИЕ</div></div>
@@ -368,6 +375,19 @@
   </section>
   <section class="closing" id="collaboration">
     <div class="wrap"><div class="kicker">Связаться с нами</div><h2>Хотите пройти программу или организовать обучение для команды? Оставьте заявку — обсудим формат, расписание и условия участия.</h2>
+      <div class="application-steps"><strong>Как проходит участие:</strong><span>Заявка</span><b>→</b><span>Согласование расписания и условий</span><b>→</b><span>Подтверждение места</span><b>→</b><span>Оплата</span><b>→</b><span>Получение ссылки и материалов</span></div>
+      <form class="application-form" id="application-form">
+        <div class="form-grid">
+          <label>Имя<input name="name" type="text" autocomplete="name" required></label>
+          <label>Email<input name="email" type="email" autocomplete="email" required></label>
+          <label class="form-wide">Тип обращения<select name="type" id="request-type" required><option value="Участие в программе">Участие в программе</option><option value="Обучение для организации">Обучение для организации</option></select></label>
+          <label class="group-field" hidden>Организация<input name="organization" type="text"></label>
+          <label class="group-field" hidden>Количество участников<input name="participants" type="number" min="1" max="500"></label>
+          <label class="form-wide">Сообщение<textarea name="message" rows="4" placeholder="Расскажите, какой формат обучения вас интересует"></textarea></label>
+        </div>
+        <button class="button" type="submit">Отправить заявку</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
       <div class="contact-links" aria-label="Контакты">
         <a class="contact-link" href="mailto:education@zulfiyaislamova.com" aria-label="Написать на education@zulfiyaislamova.com"><span class="contact-icon" aria-hidden="true">✉</span><span>education@zulfiyaislamova.com</span></a>
         <a class="contact-link" href="https://t.me/antigoalschool" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><span class="contact-icon" aria-hidden="true">➤</span><span>Telegram</span></a>
@@ -397,6 +417,29 @@
   function openProgram(){programSection.hidden=false;programSection.scrollIntoView({behavior:'smooth',block:'start'});}
   document.getElementById('open-program-featured').addEventListener('click',openProgram);
   closeProgram.addEventListener('click',()=>{programSection.hidden=true;document.querySelector('.featured-program').scrollIntoView({behavior:'smooth',block:'center'});});
+  const applicationForm=document.getElementById('application-form');
+  const requestType=document.getElementById('request-type');
+  const groupFields=[...document.querySelectorAll('.group-field')];
+  function updateGroupFields(){const group=requestType.value===(document.documentElement.lang==='ru'?'Обучение для организации':'Training for an organisation');groupFields.forEach(label=>{label.hidden=!group;const input=label.querySelector('input');input.required=group;});}
+  document.querySelectorAll('[data-request-type]').forEach(button=>button.addEventListener('click',()=>{requestType.value=button.dataset.requestType;updateGroupFields();}));
+  requestType.addEventListener('change',updateGroupFields);
+  updateGroupFields();
+  applicationForm.addEventListener('submit',async event=>{
+    event.preventDefault();
+    const submitButton=applicationForm.querySelector('button[type="submit"]');
+    const status=document.getElementById('form-status');
+    submitButton.disabled=true;
+    status.textContent=document.documentElement.lang==='ru'?'Отправляем заявку…':'Sending your enquiry…';
+    const data=Object.fromEntries(new FormData(applicationForm).entries());
+    try{
+      await fetch('https://script.google.com/macros/s/AKfycby2AnctWymJL96u8d2sUDmOh-kcDhJZyRQN48BvcuE288IUbxPpX0Y9u595G_Diollv3w/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)});
+      applicationForm.reset();
+      updateGroupFields();
+      status.textContent=document.documentElement.lang==='ru'?'Спасибо! Заявка получена. Ответим в течение двух рабочих дней.':'Thank you! Your enquiry has been received. We will reply within two working days.';
+    }catch(error){
+      status.textContent=document.documentElement.lang==='ru'?'Не удалось отправить заявку. Попробуйте ещё раз или напишите нам на education@zulfiyaislamova.com.':'We could not send your enquiry. Please try again or email education@zulfiyaislamova.com.';
+    }finally{submitButton.disabled=false;}
+  });
   document.getElementById('year').textContent=new Date().getFullYear();
 </script>
 </body>
