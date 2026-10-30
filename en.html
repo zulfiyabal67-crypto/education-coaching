@@ -201,12 +201,11 @@
   </section>
   <section class="directions" id="directions">
     <div class="wrap">
-      <div class="section-head"><div class="kicker">Areas of Work</div><h2>Tools for Growth<br>at Every Level of Education</h2><p>Four interconnected areas support the development of individuals, professionals, and educational communities.</p></div>
+      <div class="section-head"><div class="kicker">Areas of Work</div><h2>Tools for Growth<br>at Every Level of Education</h2><p>Three interconnected areas support the development of individuals, professionals, and educational communities.</p></div>
       <div class="cards">
-        <article class="card" id="selfcoaching-card" role="button" tabindex="0" aria-controls="selfcoaching" aria-expanded="false"><div class="number">01</div><h3>Self-Coaching</h3><p>Practices in self-reflection, goal setting, and conscious decision-making for personal and professional development.</p><span class="card-action">Explore the Approach <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
+        <article class="card" id="leadership-card" role="button" tabindex="0" aria-controls="leadership" aria-expanded="false"><div class="number">01</div><h3>Educational Leadership</h3><p>A coaching approach to communication, teamwork, leadership, and the development of educational organisations.</p><span class="card-action">Explore This Area <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
         <article class="card" id="teachers-card" role="button" tabindex="0" aria-controls="teachers" aria-expanded="false"><div class="number">02</div><h3>Teacher Development</h3><p>Support for professional growth, competency development, and finding new resources for working in a changing educational environment.</p><span class="card-action">Explore This Area <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
-        <article class="card" id="leadership-card" role="button" tabindex="0" aria-controls="leadership" aria-expanded="false"><div class="number">03</div><h3>Educational Leadership</h3><p>A coaching approach to communication, teamwork, leadership, and the development of educational organisations.</p><span class="card-action">Explore This Area <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
-        <article class="card" id="program-card" role="button" tabindex="0" aria-controls="programs" aria-expanded="false"><div class="number">04</div><h3>Educational Programmes</h3><p>Practical learning formats for personal and professional development.</p><span class="card-action">Explore programmes <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
+        <article class="card" id="selfcoaching-card" role="button" tabindex="0" aria-controls="selfcoaching" aria-expanded="false"><div class="number">03</div><h3>Self-Coaching</h3><p>Practices in self-reflection, goal setting, and conscious decision-making for personal and professional development.</p><span class="card-action">Explore the Approach <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
       </div>
     </div>
   </section>
@@ -401,14 +400,11 @@
     closeTeachers.addEventListener('click',()=>{teachersSection.hidden=true;teachersCard.setAttribute('aria-expanded','false');teachersCard.scrollIntoView({behavior:'smooth',block:'center'});});
     teachersCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openTeachers();}});
   }
-  const programCard=document.getElementById('program-card');
   const programSection=document.getElementById('programs');
-   const closeProgram=document.getElementById('close-program');
-  function openProgram(){programSection.hidden=false;programCard.setAttribute('aria-expanded','true');programSection.scrollIntoView({behavior:'smooth',block:'start'});}
-  programCard.addEventListener('click',openProgram);
+  const closeProgram=document.getElementById('close-program');
+  function openProgram(){programSection.hidden=false;programSection.scrollIntoView({behavior:'smooth',block:'start'});}
   document.getElementById('open-program-featured').addEventListener('click',openProgram);
-   closeProgram.addEventListener('click',()=>{programSection.hidden=true;programCard.setAttribute('aria-expanded','false');programCard.scrollIntoView({behavior:'smooth',block:'center'});});
-  programCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProgram();}});
+  closeProgram.addEventListener('click',()=>{programSection.hidden=true;document.querySelector('.featured-program').scrollIntoView({behavior:'smooth',block:'center'});});
   document.getElementById('year').textContent=new Date().getFullYear();
 </script>
 </body>
