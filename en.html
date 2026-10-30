@@ -130,6 +130,13 @@
     .pricing-card p{font-size:14px;color:var(--muted);margin:14px 0 0}
     .pricing-note{text-align:center;color:var(--muted);font-size:14px;margin:24px 0 0}
     @media(max-width:620px){.pricing-section{padding:58px 0}.pricing-grid{grid-template-columns:1fr;gap:14px}.pricing-card{padding:24px}}
+    .home-author{padding:76px 0;background:linear-gradient(120deg,#f5f7ff 0%,#eaf7ff 55%,#e1fbf4 100%)}
+    .home-author-grid{display:grid;grid-template-columns:220px 1fr;gap:38px;align-items:center;max-width:980px}
+    .home-author-photo{width:100%;height:260px;object-fit:cover;object-position:center 25%;border-radius:18px;box-shadow:0 16px 38px rgba(16,44,70,.13)}
+    .home-author-copy h2{font-size:clamp(28px,3.6vw,40px);line-height:1.15;letter-spacing:-.035em;color:var(--navy);margin:10px 0}
+    .home-author-role{font-weight:750;color:var(--blue);margin:0 0 14px}
+    .home-author-copy>p:not(.home-author-role){color:var(--muted);margin:0 0 22px;max-width:700px}
+    @media(max-width:620px){.home-author{padding:58px 0}.home-author-grid{grid-template-columns:1fr;gap:24px}.home-author-photo{height:240px;max-width:220px}}
   </style>
 <script type="application/ld+json">
   {
@@ -180,7 +187,19 @@
       <div class="intro-copy"><p><strong>EDUCATION &amp; COACHING</strong> is the educational branch of Zulfiya Islamova (Balgimbayeva)’s professional work, connecting contemporary approaches to personal and professional development with the practical needs of the education sector.</p><p>We see development as a continuous process—from understanding personal goals and strengths to strengthening professional competencies, leadership, and the creation of a supportive educational environment.</p><p>The project welcomes the exchange of experience, professional dialogue, and international collaboration.</p></div>
     </div>
   </section>
-<section class="directions" id="directions">
+<section class="home-author" id="author" aria-labelledby="home-author-title">
+    <div class="wrap home-author-grid">
+      <img class="home-author-photo" src="портрет.jpg" alt="Zulfiya Islamova (Balgimbayeva)" loading="lazy">
+      <div class="home-author-copy">
+        <div class="kicker">About the Author</div>
+        <h2 id="home-author-title">Zulfiya Islamova (Balgimbayeva)</h2>
+        <p class="home-author-role">PhD · Researcher · Lecturer in Pedagogy and Psychology · Coach</p>
+        <p>Author of approximately 150 scientific publications and four monographs. I bring together research and teaching experience with coaching approaches, with a particular focus on self-coaching and the professional development of educators.</p>
+        <a class="button" href="author-en.html">More About the Author ↗</a>
+      </div>
+    </div>
+  </section>
+  <section class="directions" id="directions">
     <div class="wrap">
       <div class="section-head"><div class="kicker">Areas of Work</div><h2>Tools for Growth<br>at Every Level of Education</h2><p>Four interconnected areas support the development of individuals, professionals, and educational communities.</p></div>
       <div class="cards">
