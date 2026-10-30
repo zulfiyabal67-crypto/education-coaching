@@ -219,10 +219,10 @@
     <div class="wrap">
       <div class="section-head"><div class="kicker">Направления работы</div><h2>Инструменты для роста<br>на каждом уровне образования</h2><p>Три взаимосвязанных направления помогают поддерживать развитие человека, профессионала и образовательного сообщества.</p></div>
       <div class="cards">
-        <article class="card" id="leadership-card" role="button" tabindex="0" aria-controls="leadership" aria-expanded="false"><div class="number">01</div><h3>Образовательное лидерство</h3><p>Коучинговый подход к коммуникации, командному взаимодействию, лидерству и развитию образовательных организаций.</p><span class="card-action">Подробнее о направлении <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
-        <article class="card" id="teachers-card" role="button" tabindex="0" aria-controls="teachers" aria-expanded="false"><div class="number">02</div><h3>Развитие педагогов</h3><p>Поддержка профессионального роста, развитие компетенций и поиск новых ресурсов для работы в меняющейся образовательной среде.</p><span class="card-action">Подробнее о направлении <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
-        <article class="card"><div class="number">03</div><h3>Психология образования</h3><p>Психологические основы обучения, мотивация, взаимодействие участников образовательного процесса и благополучие в образовательной среде.</p><span class="card-action">Подробнее о направлении <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
-      </div>
+        <article class="card"><div class="number">01</div><h3>Образовательное лидерство</h3><p>Коучинговый подход к коммуникации, командному взаимодействию, лидерству и развитию образовательных организаций.</p><a class="card-action" href="leadership.html">Подробнее о направлении <span class="arrow-circle" aria-hidden="true">↗</span></a></article>
+        <article class="card"><div class="number">02</div><h3>Развитие педагогов</h3><p>Поддержка профессионального роста, развитие компетенций и поиск новых ресурсов для работы в меняющейся образовательной среде.</p><a class="card-action" href="teachers.html">Подробнее о направлении <span class="arrow-circle" aria-hidden="true">↗</span></a></article>
+        <article class="card"><div class="number">03</div><h3>Психология образования</h3><p>Психологические основы обучения, мотивация, взаимодействие участников образовательного процесса и благополучие в образовательной среде.</p><a class="card-action" href="psychology.html">Подробнее о направлении <span class="arrow-circle" aria-hidden="true">↗</span></a></article>
+            </div>
     </div>
   </section>
   <section class="featured-program" aria-labelledby="featured-program-title">
@@ -391,31 +391,6 @@
   const navLinks=document.getElementById('navLinks');
   menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'×':'☰';});
   navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
-  const selfcoachingCard=document.getElementById('selfcoaching-card');
-  const selfcoachingSection=document.getElementById('selfcoaching');
-  const closeSelfcoaching=document.getElementById('close-selfcoaching');
-  function openSelfcoaching(){selfcoachingSection.hidden=false;selfcoachingCard.setAttribute('aria-expanded','true');selfcoachingSection.scrollIntoView({behavior:'smooth',block:'start'});}
-  selfcoachingCard.addEventListener('click',openSelfcoaching);
-  closeSelfcoaching.addEventListener('click',()=>{selfcoachingSection.hidden=true;selfcoachingCard.setAttribute('aria-expanded','false');selfcoachingCard.scrollIntoView({behavior:'smooth',block:'center'});});
-  selfcoachingCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openSelfcoaching();}});
-  const leadershipCard=document.getElementById('leadership-card');
-  const leadershipSection=document.getElementById('leadership');
-  const closeLeadership=document.getElementById('close-leadership');
-  function openLeadership(){leadershipSection.hidden=false;leadershipCard.setAttribute('aria-expanded','true');leadershipSection.scrollIntoView({behavior:'smooth',block:'start'});}
-  leadershipCard.addEventListener('click',openLeadership);
-  closeLeadership.addEventListener('click',()=>{leadershipSection.hidden=true;leadershipCard.setAttribute('aria-expanded','false');leadershipCard.scrollIntoView({behavior:'smooth',block:'center'});});
-  leadershipCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLeadership();}});
-  const teachersCard=document.getElementById('teachers-card');
-  const teachersSection=document.getElementById('teachers');
-  const closeTeachers=document.getElementById('close-teachers');
-  function openTeachers(){teachersSection.hidden=false;teachersCard.setAttribute('aria-expanded','true');teachersSection.scrollIntoView({behavior:'smooth',block:'start'});}
-  if(teachersCard && teachersSection && closeTeachers){
-    teachersCard.addEventListener('click',openTeachers);
-    const teachersAction=teachersCard.querySelector('.card-action');
-    if(teachersAction) teachersAction.addEventListener('click',e=>{e.preventDefault();openTeachers();});
-    closeTeachers.addEventListener('click',()=>{teachersSection.hidden=true;teachersCard.setAttribute('aria-expanded','false');teachersCard.scrollIntoView({behavior:'smooth',block:'center'});});
-    teachersCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openTeachers();}});
-  }
   const programSection=document.getElementById('programs');
   const closeProgram=document.getElementById('close-program');
   function openProgram(){programSection.hidden=false;programSection.scrollIntoView({behavior:'smooth',block:'start'});}
