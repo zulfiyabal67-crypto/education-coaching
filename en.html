@@ -189,7 +189,12 @@
     .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.application-form label{display:flex;flex-direction:column;gap:7px;color:var(--navy);font-size:13px;font-weight:700}.application-form input,.application-form select,.application-form textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);font:inherit;font-weight:400}.application-form textarea{resize:vertical}.form-wide{grid-column:1/-1}.application-form button{border:0;cursor:pointer;margin-top:20px}.form-status{min-height:24px;margin:12px 0 0;color:var(--teal);font-weight:700;font-size:14px}
     @media(max-width:620px){.application-form{padding:18px}.form-grid{grid-template-columns:1fr}.form-wide{grid-column:auto}.application-steps{align-items:flex-start;flex-direction:column}.application-steps b{display:none}}
 
-  </style>
+  
+    .footer-row{display:grid;grid-template-columns:minmax(220px,1.1fr) minmax(280px,1fr) auto;align-items:start;gap:28px}
+    .footer-identity{display:flex;flex-direction:column;gap:14px}.footer-meta{display:flex;flex-direction:column;gap:4px;line-height:1.6}.footer-meta strong{color:#fff;font-size:13px;font-weight:700}.footer-meta span{display:block}
+    .footer-links{display:flex;flex-direction:column;gap:16px}.footer-nav{display:flex;flex-wrap:wrap;gap:16px}.footer-nav a,.footer-email{color:#d7e5ed;text-decoration:none}.footer-nav a:hover,.footer-email:hover{text-decoration:underline}.footer-label{display:block;color:#fff;font-weight:700;margin-bottom:6px}.footer-email{display:inline-block;margin-bottom:10px}.footer-contacts .contact-links{justify-content:flex-start;margin:4px 0 0;gap:8px}.footer-contacts .contact-link{padding:7px 10px}.footer-copy{white-space:nowrap;color:#a9bfce;padding-top:3px}
+    @media(max-width:850px){.footer-row{grid-template-columns:1fr;gap:20px}.footer-copy{white-space:normal}}
+</style>
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -429,24 +434,14 @@
         <button class="button" type="submit">Submit enquiry</button>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
       </form>
-      <div class="contact-links" aria-label="Contact details">
-        <a class="contact-link" href="mailto:education@zulfiyaislamova.com" aria-label="Email education@zulfiyaislamova.com"><span class="contact-icon" aria-hidden="true">✉</span><span>education@zulfiyaislamova.com</span></a>
-        <a class="contact-link" href="https://t.me/antigoalschool" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><span class="contact-icon" aria-hidden="true">➤</span><span>Telegram</span></a>
-        <a class="contact-link" href="https://www.instagram.com/zulfiya_islamova67/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="contact-icon" aria-hidden="true">◎</span><span>Instagram</span></a>
-        <a class="contact-link" href="https://www.facebook.com/share/19JZSg349d/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Find us on Facebook"><span class="contact-icon" aria-hidden="true">f</span><span>Facebook</span></a>
-      </div>
+
       <a class="button" href="#top">Back to Top ↑</a></div>
   </section>
 </main>
 <footer><div class="wrap footer-row">
-  <div class="footer-brand">EDUCATION &amp; COACHING</div>
-  <div class="footer-meta">
-    <strong>Zulfiya Islamova (Balgimbayeva)</strong>
-    <span>PhD · Researcher · Educator · Coach</span>
-    <span>Individual entrepreneur, Republic of Armenia · TIN: 20434413</span>
-    <a href="mailto:education@zulfiyaislamova.com" target="_blank" rel="noopener noreferrer">education@zulfiyaislamova.com</a>
-  </div>
-  <div>© <span id="year"></span> EDUCATION &amp; COACHING</div>
+  <div class="footer-identity"><div class="footer-brand">EDUCATION &amp; COACHING</div><div class="footer-meta"><strong>Zulfiya Islamova (Balgimbayeva)</strong><span>PhD · Researcher · Educator · Coach</span><span>Individual Entrepreneur, Republic of Armenia · TIN: 20434413</span></div></div>
+  <div class="footer-links"><nav class="footer-nav" aria-label="Footer navigation"><a href="#programs">Programme</a><a href="author-en.html">About the Author</a><a href="#collaboration">Contact</a></nav><div class="footer-contacts"><span class="footer-label">Get in touch</span><a class="footer-email" href="mailto:education@education.zulfiyaislamova.com">education@education.zulfiyaislamova.com</a><div class="contact-links" aria-label="Social media"><a class="contact-link" href="https://t.me/antigoalschool" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><span class="contact-icon" aria-hidden="true">➤</span><span>Telegram</span></a><a class="contact-link" href="https://www.instagram.com/zulfiya_islamova67/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="contact-icon" aria-hidden="true">◎</span><span>Instagram</span></a><a class="contact-link" href="https://www.facebook.com/share/19JZSg349d/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span class="contact-icon" aria-hidden="true">f</span><span>Facebook</span></a></div></div></div>
+  <div class="footer-copy">© <span id="year"></span> EDUCATION &amp; COACHING</div>
 </div></footer>
 <script>
   const menuBtn=document.getElementById('menuBtn');
@@ -494,7 +489,7 @@
       updateGroupFields();
       status.textContent=document.documentElement.lang==='ru'?'Спасибо! Заявка получена. Ответим в течение двух рабочих дней.':'Thank you! Your enquiry has been received. We will reply within two working days.';
     }catch(error){
-      status.textContent=document.documentElement.lang==='ru'?'Не удалось отправить заявку. Попробуйте ещё раз или напишите нам на education@zulfiyaislamova.com.':'We could not send your enquiry. Please try again or email education@zulfiyaislamova.com.';
+      status.textContent=document.documentElement.lang==='ru'?'Не удалось отправить заявку. Попробуйте ещё раз или напишите нам на education@education.zulfiyaislamova.com.':'We could not send your enquiry. Please try again or email education@education.zulfiyaislamova.com.';
     }finally{submitButton.disabled=false;}
   });
   document.getElementById('year').textContent=new Date().getFullYear();
