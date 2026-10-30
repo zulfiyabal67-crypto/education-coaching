@@ -200,12 +200,11 @@
   </section>
   <section class="directions" id="directions">
     <div class="wrap">
-      <div class="section-head"><div class="kicker">Направления работы</div><h2>Инструменты для роста<br>на каждом уровне образования</h2><p>Четыре взаимосвязанных направления помогают поддерживать развитие человека, профессионала и образовательного сообщества.</p></div>
+      <div class="section-head"><div class="kicker">Направления работы</div><h2>Инструменты для роста<br>на каждом уровне образования</h2><p>Три взаимосвязанных направления помогают поддерживать развитие человека, профессионала и образовательного сообщества.</p></div>
       <div class="cards">
-        <article class="card" id="selfcoaching-card" role="button" tabindex="0" aria-controls="selfcoaching" aria-expanded="false"><div class="number">01</div><h3>Самокоучинг</h3><p>Практики самоанализа, постановки целей и осознанного принятия решений для личного и профессионального развития.</p><span class="card-action">Подробнее о подходе <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
+        <article class="card" id="leadership-card" role="button" tabindex="0" aria-controls="leadership" aria-expanded="false"><div class="number">01</div><h3>Образовательное лидерство</h3><p>Коучинговый подход к коммуникации, командному взаимодействию, лидерству и развитию образовательных организаций.</p><span class="card-action">Подробнее о направлении <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
         <article class="card" id="teachers-card" role="button" tabindex="0" aria-controls="teachers" aria-expanded="false"><div class="number">02</div><h3>Развитие педагогов</h3><p>Поддержка профессионального роста, развитие компетенций и поиск новых ресурсов для работы в меняющейся образовательной среде.</p><span class="card-action">Подробнее о направлении <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
-        <article class="card" id="leadership-card" role="button" tabindex="0" aria-controls="leadership" aria-expanded="false"><div class="number">03</div><h3>Образовательное лидерство</h3><p>Коучинговый подход к коммуникации, командному взаимодействию, лидерству и развитию образовательных организаций.</p><span class="card-action">Подробнее о направлении <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
-        <article class="card" id="program-card" role="button" tabindex="0" aria-controls="programs" aria-expanded="false"><div class="number">04</div><h3>Образовательные программы</h3><p>Практические форматы обучения для личного и профессионального развития.</p><span class="card-action">Открыть программы <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
+        <article class="card" id="selfcoaching-card" role="button" tabindex="0" aria-controls="selfcoaching" aria-expanded="false"><div class="number">03</div><h3>Самокоучинг</h3><p>Практики самоанализа, постановки целей и осознанного принятия решений для личного и профессионального развития.</p><span class="card-action">Подробнее о подходе <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
       </div>
     </div>
   </section>
@@ -400,14 +399,11 @@
     closeTeachers.addEventListener('click',()=>{teachersSection.hidden=true;teachersCard.setAttribute('aria-expanded','false');teachersCard.scrollIntoView({behavior:'smooth',block:'center'});});
     teachersCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openTeachers();}});
   }
-  const programCard=document.getElementById('program-card');
   const programSection=document.getElementById('programs');
-   const closeProgram=document.getElementById('close-program');
-  function openProgram(){programSection.hidden=false;programCard.setAttribute('aria-expanded','true');programSection.scrollIntoView({behavior:'smooth',block:'start'});}
-  programCard.addEventListener('click',openProgram);
+  const closeProgram=document.getElementById('close-program');
+  function openProgram(){programSection.hidden=false;programSection.scrollIntoView({behavior:'smooth',block:'start'});}
   document.getElementById('open-program-featured').addEventListener('click',openProgram);
-   closeProgram.addEventListener('click',()=>{programSection.hidden=true;programCard.setAttribute('aria-expanded','false');programCard.scrollIntoView({behavior:'smooth',block:'center'});});
-  programCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProgram();}});
+  closeProgram.addEventListener('click',()=>{programSection.hidden=true;document.querySelector('.featured-program').scrollIntoView({behavior:'smooth',block:'center'});});
   document.getElementById('year').textContent=new Date().getFullYear();
 </script>
 </body>
