@@ -108,6 +108,16 @@
 
     
     @media(min-width:621px){.hero h1{font-size:clamp(36px,3.8vw,52px);line-height:1.08}.hero h1 span{white-space:normal}}
+    .featured-program{padding:76px 0;background:linear-gradient(120deg,#eef4ff 0%,#e9fbf7 100%)}
+    .featured-program-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:42px;align-items:center}
+    .featured-program h2{font-size:clamp(30px,3.8vw,42px);line-height:1.15;letter-spacing:-.03em;color:var(--navy);margin:10px 0 16px}
+    .featured-program-lead{max-width:680px;color:var(--muted);font-size:16px;margin:0 0 24px}
+    .featured-program-hours{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .featured-program-hours div{min-height:116px;padding:18px 12px;background:rgba(255,255,255,.82);border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+    .featured-program-hours strong{font-size:34px;line-height:1.1;color:var(--coral)}
+    .featured-program-hours span{font-size:12px;font-weight:700;color:var(--muted);margin-top:8px}
+    @media(max-width:850px){.featured-program-grid{grid-template-columns:1fr;gap:28px}}
+    @media(max-width:620px){.featured-program{padding:58px 0}.featured-program-hours{gap:8px}.featured-program-hours div{min-height:100px;padding:12px 6px}.featured-program-hours strong{font-size:29px}.featured-program-hours span{font-size:11px}}
   </style>
 <script type="application/ld+json">
   {
@@ -166,6 +176,21 @@
         <article class="card" id="teachers-card" role="button" tabindex="0" aria-controls="teachers" aria-expanded="false"><div class="number">02</div><h3>Teacher Development</h3><p>Support for professional growth, competency development, and finding new resources for working in a changing educational environment.</p><span class="card-action">Explore This Area <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
         <article class="card" id="leadership-card" role="button" tabindex="0" aria-controls="leadership" aria-expanded="false"><div class="number">03</div><h3>Educational Leadership</h3><p>A coaching approach to communication, teamwork, leadership, and the development of educational organisations.</p><span class="card-action">Explore This Area <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
         <article class="card" id="program-card" role="button" tabindex="0" aria-controls="programs" aria-expanded="false"><div class="number">04</div><h3>Educational Programmes</h3><p>Practical learning formats for personal and professional development.</p><span class="card-action">Explore programmes <span class="arrow-circle" aria-hidden="true">↗</span></span></article>
+      </div>
+    </div>
+  </section>
+  <section class="featured-program" aria-labelledby="featured-program-title">
+    <div class="wrap featured-program-grid">
+      <div>
+        <div class="kicker">Featured Educational Programme</div>
+        <h2 id="featured-program-title">Self-Coaching for Educators</h2>
+        <p class="featured-program-lead">A practical professional development programme that helps educators reflect on work situations, strengthen self-regulation, and find solutions independently.</p>
+        <button class="button" type="button" id="open-program-featured">Learn More About the Programme ↗</button>
+      </div>
+      <div class="featured-program-hours">
+        <div><strong>40</strong><span>hours of learning</span></div>
+        <div><strong>20</strong><span>hours of theory</span></div>
+        <div><strong>20</strong><span>hours of practice</span></div>
       </div>
     </div>
   </section>
@@ -326,6 +351,7 @@
    const closeProgram=document.getElementById('close-program');
   function openProgram(){programSection.hidden=false;programCard.setAttribute('aria-expanded','true');programSection.scrollIntoView({behavior:'smooth',block:'start'});}
   programCard.addEventListener('click',openProgram);
+  document.getElementById('open-program-featured').addEventListener('click',openProgram);
    closeProgram.addEventListener('click',()=>{programSection.hidden=true;programCard.setAttribute('aria-expanded','false');programCard.scrollIntoView({behavior:'smooth',block:'center'});});
   programCard.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProgram();}});
   document.getElementById('year').textContent=new Date().getFullYear();
