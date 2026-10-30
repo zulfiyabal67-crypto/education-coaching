@@ -112,12 +112,12 @@
     .featured-program-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:42px;align-items:center}
     .featured-program h2{font-size:clamp(30px,3.8vw,42px);line-height:1.15;letter-spacing:-.03em;color:var(--navy);margin:10px 0 16px}
     .featured-program-lead{max-width:680px;color:var(--muted);font-size:16px;margin:0 0 24px}
-    .featured-program-hours{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-    .featured-program-hours div{min-height:116px;padding:18px 12px;background:rgba(255,255,255,.82);border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
-    .featured-program-hours strong{font-size:34px;line-height:1.1;color:var(--coral)}
-    .featured-program-hours span{font-size:12px;font-weight:700;color:var(--muted);margin-top:8px}
+    .featured-program-hours{display:grid;grid-template-columns:1fr;gap:10px;max-width:430px}
+    .featured-program-hours div{min-height:64px;padding:10px 16px;background:rgba(255,255,255,.82);border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:row;justify-content:flex-start;align-items:center;gap:18px;text-align:left}
+    .featured-program-hours strong{font-size:34px;line-height:1;color:var(--coral);min-width:54px;text-align:left}
+    .featured-program-hours span{font-size:14px;font-weight:700;color:var(--muted);margin:0;text-align:left}
     @media(max-width:850px){.featured-program-grid{grid-template-columns:1fr;gap:28px}}
-    @media(max-width:620px){.featured-program{padding:58px 0}.featured-program-hours{gap:8px}.featured-program-hours div{min-height:100px;padding:12px 6px}.featured-program-hours strong{font-size:29px}.featured-program-hours span{font-size:11px}}
+    @media(max-width:620px){.featured-program{padding:58px 0}.featured-program-hours{gap:8px}.featured-program-hours div{min-height:58px;padding:10px 12px}.featured-program-hours strong{font-size:29px;min-width:48px}.featured-program-hours span{font-size:12px}}
     .pricing-section{padding:76px 0;background:linear-gradient(180deg,#fff 0%,#f7f9ff 100%)}
     .pricing-heading{max-width:760px;margin:0 auto 34px;text-align:center}
     .pricing-heading h2{color:var(--navy)}
@@ -231,7 +231,7 @@
         <div class="kicker">Главная образовательная программа</div>
         <h2 id="featured-program-title">Самокоучинг для педагогов</h2>
         <p class="featured-program-lead">Практическая программа профессионального развития, которая помогает осмысливать рабочие ситуации, укреплять навыки саморегуляции и самостоятельно находить решения.</p>
-        <div class="featured-program-hours"><span>8 недель</span><span>8 живых онлайн-встреч</span><span>40 часов обучения</span></div>
+        <div class="featured-program-hours"><div><strong>8</strong><span>недель</span></div><div><strong>8</strong><span>живых онлайн-встреч</span></div><div><strong>40</strong><span>часов обучения</span></div></div>
         <button class="button" type="button" id="open-program-featured">Подробнее о программе ↗</button>
       </div>
 
