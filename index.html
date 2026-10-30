@@ -130,6 +130,13 @@
     .pricing-card p{font-size:14px;color:var(--muted);margin:14px 0 0}
     .pricing-note{text-align:center;color:var(--muted);font-size:14px;margin:24px 0 0}
     @media(max-width:620px){.pricing-section{padding:58px 0}.pricing-grid{grid-template-columns:1fr;gap:14px}.pricing-card{padding:24px}}
+    .home-author{padding:76px 0;background:linear-gradient(120deg,#f5f7ff 0%,#eaf7ff 55%,#e1fbf4 100%)}
+    .home-author-grid{display:grid;grid-template-columns:220px 1fr;gap:38px;align-items:center;max-width:980px}
+    .home-author-photo{width:100%;height:260px;object-fit:cover;object-position:center 25%;border-radius:18px;box-shadow:0 16px 38px rgba(16,44,70,.13)}
+    .home-author-copy h2{font-size:clamp(28px,3.6vw,40px);line-height:1.15;letter-spacing:-.035em;color:var(--navy);margin:10px 0}
+    .home-author-role{font-weight:750;color:var(--blue);margin:0 0 14px}
+    .home-author-copy>p:not(.home-author-role){color:var(--muted);margin:0 0 22px;max-width:700px}
+    @media(max-width:620px){.home-author{padding:58px 0}.home-author-grid{grid-template-columns:1fr;gap:24px}.home-author-photo{height:240px;max-width:220px}}
   </style>
   <script type="application/ld+json">
   {
@@ -179,7 +186,19 @@
       <div class="intro-copy"><p><strong>EDUCATION &amp; COACHING</strong> — образовательное направление профессиональной деятельности Зульфии Исламовой (Балгимбаевой), которое соединяет современные подходы к личностному и профессиональному развитию с практическими задачами образовательной сферы.</p><p>Мы рассматриваем развитие как непрерывный процесс: от понимания собственных целей и сильных сторон до укрепления профессиональных компетенций, лидерства и создания поддерживающей образовательной среды.</p><p>Проект открыт к обмену опытом, профессиональному диалогу и международному сотрудничеству.</p></div>
     </div>
   </section>
-<section class="directions" id="directions">
+<section class="home-author" id="author" aria-labelledby="home-author-title">
+    <div class="wrap home-author-grid">
+      <img class="home-author-photo" src="портрет.jpg" alt="Зульфия Исламова (Балгимбаева)" loading="lazy">
+      <div class="home-author-copy">
+        <div class="kicker">Автор проекта</div>
+        <h2 id="home-author-title">Зульфия Исламова (Балгимбаева)</h2>
+        <p class="home-author-role">PhD · Исследователь · Преподаватель педагогики и психологии · Коуч</p>
+        <p>Автор около 150 научных публикаций и четырёх монографий. Объединяю научный и педагогический опыт с коучинговыми подходами, уделяя особое внимание самокоучингу и профессиональному развитию педагогов.</p>
+        <a class="button" href="author.html">Подробнее об авторе ↗</a>
+      </div>
+    </div>
+  </section>
+  <section class="directions" id="directions">
     <div class="wrap">
       <div class="section-head"><div class="kicker">Направления работы</div><h2>Инструменты для роста<br>на каждом уровне образования</h2><p>Четыре взаимосвязанных направления помогают поддерживать развитие человека, профессионала и образовательного сообщества.</p></div>
       <div class="cards">
