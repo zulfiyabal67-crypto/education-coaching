@@ -529,7 +529,7 @@
     status.textContent=document.documentElement.lang==='ru'?'Отправляем заявку…':'Sending your enquiry…';
     const data=Object.fromEntries(new FormData(applicationForm).entries());
     try{
-      await fetch('https://script.google.com/macros/s/AKfycby2AnctWymJL96u8d2sUDmOh-kcDhJZyRQN48BvcuE288IUbxPpX0Y9u595G_Diollv3w/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)});
+      await fetch('https://script.google.com/macros/s/AKfycbwjIkXqu9mfWIffyg0zJyhJF8TGrYVslkaDp-dh6G8iNEzqyyWQGGntOuEOazXpdmyEow/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)});
       applicationForm.reset();
       updateGroupFields();
       status.textContent=document.documentElement.lang==='ru'?'Спасибо! Заявка получена. Ответим в течение двух рабочих дней.':'Thank you! Your enquiry has been received. We will reply within two working days.';
