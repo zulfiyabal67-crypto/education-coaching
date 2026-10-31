@@ -57,6 +57,10 @@
     @media(max-width:850px){.program-layout{grid-template-columns:1fr;gap:28px}.program-layout>div:first-child{padding-top:0}.links{gap:14px}.links a{font-size:12px}.nav-cta{display:none}.hero-grid{grid-template-columns:1fr;gap:25px}.hero{padding:75px 0 50px}.visual{min-height:300px}.orbit{transform:scale(.88)}.intro-grid,.approach-grid{grid-template-columns:1fr;gap:30px}}
     @media(max-width:620px){.wrap{width:min(100% - 32px,1140px)}.nav{height:68px}.menu{display:block}.links{display:none;position:absolute;top:68px;left:0;right:0;background:white;padding:18px 24px 24px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:18px}.links.open{display:flex}.hero{padding:60px 0 35px}h1{font-size:43px}.lead{font-size:16px}.visual{min-height:250px}.orbit{transform:scale(.72)}section{padding:64px 0}.cards{grid-template-columns:1fr}.card{min-height:0}.statement{font-size:22px}.approach-panel{padding:27px}.footer-row{flex-direction:column;align-items:flex-start;gap:8px}}
 
+    /* Keep the desktop navigation on one line */
+    @media(min-width:621px){.nav{gap:12px}.links{flex-wrap:nowrap;white-space:nowrap;gap:clamp(8px,1.1vw,16px);font-size:12px;flex-shrink:0}}
+    @media(min-width:621px) and (max-width:850px){.links{gap:8px;font-size:10.5px}}
+
     /* Яркая, современная палитра образовательного проекта */
     .hero{background:radial-gradient(ellipse at 84% 14%,rgba(0,201,183,.32),transparent 35%),radial-gradient(ellipse at 10% 90%,rgba(255,107,107,.12),transparent 34%),linear-gradient(120deg,#f5f7ff 0%,#eaf7ff 52%,#e1fbf4 100%)}
     .hero h1 span{color:var(--coral)}
