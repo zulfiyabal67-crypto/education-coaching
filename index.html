@@ -209,6 +209,14 @@
     .footer-bottom p{margin:0}
     @media(max-width:850px){.footer-row{gap:18px}.footer-bottom{align-items:flex-start;flex-direction:column;gap:6px}}
     @media(max-width:620px){.footer-row{gap:10px;padding-bottom:24px}.footer-bottom{gap:8px}.footer{font-size:10px}}
+
+    /* Accessibility and mobile layout refinements */
+    .kicker{color:#087f78}
+    .hero h1 span{color:#087f78}
+    .number{color:#087f78}
+    .button,.nav-cta{background:#087f78;color:#fff}
+    .button:hover,.nav-cta:hover{background:#066963}
+    @media(max-width:620px){.hero h1 span{white-space:normal;display:inline}}
 </style>
   <script type="application/ld+json">
   {
@@ -232,7 +240,7 @@
     <a class="brand" href="#top" aria-label="EDUCATION & COACHING — главная"><span class="brand-mark">E&amp;C</span><span>EDUCATION<br>& COACHING</span></a>
     <button class="menu" aria-label="Открыть меню" aria-expanded="false" id="menuBtn">☰</button>
     <nav class="links" id="navLinks" aria-label="Главная навигация">
-      <a href="author.html">Об авторе</a><a href="#about">О проекте</a><a href="#featured-program-title">Образовательная программа</a><a href="#directions">Направления</a><a href="#approach">Наш подход</a><a href="#collaboration">Контакты</a>
+      <a href="author.html">Об авторе</a><a href="#about">О проекте</a><a href="#programs">Образовательная программа</a><a href="#directions">Направления</a><a href="#approach">Наш подход</a><a href="#collaboration">Контакты</a>
     </nav>
     <a class="nav-cta" href="#collaboration">Сотрудничество ↗</a>
     <div class="language-switch" aria-label="Choose language"><a href="index.html" lang="ru" aria-current="page" aria-label="Русская версия">RU</a><span aria-hidden="true">|</span><a href="en.html" lang="en" aria-label="English version">EN</a></div>
@@ -465,7 +473,7 @@
       </div>
       <div class="footer-links">
         <nav class="footer-nav" aria-label="Навигация в подвале">
-          <a href="#featured-program-title">Программа</a>
+          <a href="#programs">Программа</a>
           <a href="author.html">Об авторе</a>
         </nav>
       </div>
@@ -496,6 +504,7 @@
   const programSection=document.getElementById('programs');
   const closeProgram=document.getElementById('close-program');
   function openProgram(){programSection.hidden=false;programSection.scrollIntoView({behavior:'smooth',block:'start'});}
+   if(location.hash==='#programs'){programSection.hidden=false;requestAnimationFrame(()=>programSection.scrollIntoView({behavior:'auto',block:'start'}));}
   document.getElementById('open-program-featured').addEventListener('click',openProgram);
   closeProgram.addEventListener('click',()=>{programSection.hidden=true;document.querySelector('.featured-program').scrollIntoView({behavior:'smooth',block:'center'});});
   const processPanel=document.getElementById('participation-process');
