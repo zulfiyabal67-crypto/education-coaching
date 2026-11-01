@@ -365,6 +365,15 @@
       .hero-map-card:nth-child(4){right:calc(50% - 151px);left:auto}
     }
 
+
+    /* Explicitly position lower circles by their outer edges, leaving a visible gap */
+    .hero-map-card:nth-child(3){left:calc(50% - 225px);right:auto}
+    .hero-map-card:nth-child(4){right:calc(50% - 225px);left:auto}
+    @media(max-width:620px){
+      .hero-map-card:nth-child(3){left:calc(50% - 190px);right:auto}
+      .hero-map-card:nth-child(4){right:calc(50% - 190px);left:auto}
+    }
+
 </style>
   <script type="application/ld+json">
   {
