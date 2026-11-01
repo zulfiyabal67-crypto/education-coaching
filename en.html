@@ -356,6 +356,15 @@
       .hero-map-card:nth-child(3),.hero-map-card:nth-child(4){bottom:58px}
     }
 
+
+    /* Keep the two lower direction circles clear of the central course circle */
+    .hero-map-card:nth-child(3){left:calc(50% - 180px);right:auto}
+    .hero-map-card:nth-child(4){right:calc(50% - 180px);left:auto}
+    @media(max-width:620px){
+      .hero-map-card:nth-child(3){left:calc(50% - 151px);right:auto}
+      .hero-map-card:nth-child(4){right:calc(50% - 151px);left:auto}
+    }
+
 </style>
 <script type="application/ld+json">
   {
