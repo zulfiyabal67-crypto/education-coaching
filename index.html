@@ -236,7 +236,22 @@
     .button,.nav-cta{background:#087f78;color:#fff}
     .button:hover,.nav-cta:hover{background:#066963}
     @media(max-width:620px){.hero h1 span{white-space:normal;display:inline}}
-</style>
+
+    /* Interactive navigation map in the homepage hero */
+    .hero .visual.hero-map{min-height:0;width:100%;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;align-content:center;padding:8px 0}
+    .hero-map-card{grid-column:span 2;min-width:0;min-height:132px;padding:17px 14px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:10px;background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:17px;box-shadow:0 12px 30px rgba(16,44,70,.08);color:var(--navy);text-decoration:none;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+    .hero-map-card:hover{transform:translateY(-5px);border-color:var(--teal);box-shadow:0 18px 38px rgba(16,44,70,.13)}
+    .hero-map-card:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+    .hero-map-card strong{font-size:clamp(13px,1.25vw,16px);line-height:1.25;font-weight:800}
+    .hero-map-label{font-size:9px;line-height:1.3;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);font-weight:850}
+    .hero-map-arrow{align-self:flex-end;color:var(--teal);font-size:19px;line-height:1;font-weight:800}
+    .hero-map-program{grid-column:1/-1;min-height:142px;padding:20px 22px;background:linear-gradient(120deg,#fff 0%,#eaf8f7 100%);border-color:rgba(0,201,183,.3)}
+    .hero-map-program strong{font-size:clamp(18px,2vw,24px);color:var(--navy)}
+    .hero-map-meta{display:flex;align-items:center;justify-content:space-between;width:100%;gap:12px;color:var(--muted);font-size:12px;font-weight:700}
+    @media(max-width:850px){.hero .visual.hero-map{padding:10px 0 18px}.hero-map-card{min-height:120px}.hero-map-program{min-height:130px}}
+    @media(max-width:620px){.hero .visual.hero-map{grid-template-columns:1fr;gap:10px;padding:8px 0 18px}.hero-map-card,.hero-map-program{grid-column:1/-1;min-height:0;padding:15px 17px;gap:8px}.hero-map-program{padding:18px}.hero-map-card strong{font-size:15px}.hero-map-label{font-size:9px}.hero-map-meta{font-size:11px}}
+
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -274,8 +289,27 @@
         <p class="lead">Программа для педагогов и преподавателей: анализ профессиональных ситуаций, саморегуляция и планирование развития.</p>
         <div class="hero-actions"><a class="button" href="#collaboration" data-request-type="Участие в программе">Подать заявку на программу ↗</a><a class="button" href="#collaboration" data-request-type="Обучение для организации">Заказать обучение для команды ↓</a></div>
       </div>
-      <div class="visual" aria-label="Четыре направления развития вокруг человека">
-        <div class="orbit"><div class="core">HUMAN<br>GROWTH</div><div class="node one">САМО-<br>КОУЧИНГ</div><div class="node two">ЛИДЕР-<br>СТВО</div><div class="node three">РАЗВИТИЕ<br>ПЕДАГОГОВ</div><div class="node four">ОБРАЗО-<br>ВАНИЕ</div></div>
+      <div class="visual hero-map" aria-label="Главная образовательная программа и три направления работы">
+        <a class="hero-map-card hero-map-program" href="#programs">
+          <span class="hero-map-label">Главная учебная программа</span>
+          <strong>Самокоучинг для педагогов</strong>
+          <span class="hero-map-meta">40 часов · теория и практика <span class="hero-map-arrow" aria-hidden="true">↗</span></span>
+        </a>
+        <a class="hero-map-card" href="leadership.html">
+          <span class="hero-map-label">Направление 01</span>
+          <strong>Образовательное лидерство</strong>
+          <span class="hero-map-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="hero-map-card" href="teachers.html">
+          <span class="hero-map-label">Направление 02</span>
+          <strong>Развитие педагогов</strong>
+          <span class="hero-map-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="hero-map-card" href="psychology.html">
+          <span class="hero-map-label">Направление 03</span>
+          <strong>Психология образования</strong>
+          <span class="hero-map-arrow" aria-hidden="true">↗</span>
+        </a>
       </div>
     </div>
   </section>
