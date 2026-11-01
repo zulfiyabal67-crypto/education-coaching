@@ -311,6 +311,21 @@
       .hero-map-card:not(.hero-map-program) strong{font-size:7.5px;letter-spacing:.02em}
     }
 
+  
+    /* Reduce all four circles while preserving the connected composition */
+    .hero .visual.hero-map:before{width:260px;height:260px}
+    .hero-map-card:not(.hero-map-program){width:126px;height:126px;padding:12px}
+    .hero-map-card:not(.hero-map-program) strong{font-size:7.5px;line-height:1.3}
+    .hero-map-program{width:160px;height:160px}
+    .hero-map-program strong{font-size:10.5px}
+    @media(max-width:620px){
+      .hero .visual.hero-map:before{width:220px;height:220px}
+      .hero-map-card:not(.hero-map-program){width:108px;height:108px;padding:10px}
+      .hero-map-card:not(.hero-map-program) strong{font-size:7px}
+      .hero-map-program{width:138px;height:138px}
+      .hero-map-program strong{font-size:9px}
+    }
+
   </style>
   <script type="application/ld+json">
   {
