@@ -676,6 +676,7 @@
   document.querySelector('.hero-map-program').addEventListener('click',event=>{event.preventDefault();openProgram();});
    if(location.hash==='#programs'){programSection.hidden=false;requestAnimationFrame(()=>programSection.scrollIntoView({behavior:'auto',block:'start'}));}
   document.getElementById('open-program-featured').addEventListener('click',openProgram);
+  document.querySelector('.footer-nav a[href="#programs"]').addEventListener('click',event=>{event.preventDefault();history.pushState(null,'','#programs');openProgram();});
   closeProgram.addEventListener('click',()=>{programSection.hidden=true;document.querySelector('.featured-program').scrollIntoView({behavior:'smooth',block:'center'});});
   const processPanel=document.getElementById('participation-process');
   const processButton=document.getElementById('toggle-process');
