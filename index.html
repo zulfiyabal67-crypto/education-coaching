@@ -302,6 +302,15 @@
       .hero-map-card:nth-child(4){right:0}
     }
 
+  
+    /* Ensure long direction names fit comfortably inside the outer circles */
+    .hero-map-card:not(.hero-map-program){width:150px;height:150px}
+    .hero-map-card:not(.hero-map-program) strong{font-size:8px;line-height:1.3;letter-spacing:.025em;overflow-wrap:normal;word-break:normal}
+    @media(max-width:620px){
+      .hero-map-card:not(.hero-map-program){width:132px;height:132px;padding:12px}
+      .hero-map-card:not(.hero-map-program) strong{font-size:7.5px;letter-spacing:.02em}
+    }
+
   </style>
   <script type="application/ld+json">
   {
