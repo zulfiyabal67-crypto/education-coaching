@@ -554,6 +554,7 @@
   const programSection=document.getElementById('programs');
   const closeProgram=document.getElementById('close-program');
   function openProgram(){programSection.hidden=false;programSection.scrollIntoView({behavior:'smooth',block:'start'});}
+  document.querySelector('.hero-map-program').addEventListener('click',event=>{event.preventDefault();openProgram();});
    if(location.hash==='#programs'){programSection.hidden=false;requestAnimationFrame(()=>programSection.scrollIntoView({behavior:'auto',block:'start'}));}
   document.getElementById('open-program-featured').addEventListener('click',openProgram);
   closeProgram.addEventListener('click',()=>{programSection.hidden=true;document.querySelector('.featured-program').scrollIntoView({behavior:'smooth',block:'center'});});
