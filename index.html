@@ -326,7 +326,24 @@
       .hero-map-program strong{font-size:9px}
     }
 
-  </style>
+  
+    /* Arrange the three direction circles so they touch the central course circle */
+    .hero .visual.hero-map:before{width:286px;height:286px;top:53%}
+    .hero-map-program{left:50%;top:53%}
+    .hero-map-card:nth-child(2){left:50%;top:calc(53% - 206px);transform:translateX(-50%)}
+    .hero-map-card:nth-child(2):hover{transform:translate(-50%,-3px)}
+    .hero-map-card:nth-child(3){left:calc(50% - 164px);right:auto;top:auto;bottom:19px}
+    .hero-map-card:nth-child(4){right:calc(50% - 164px);left:auto;top:auto;bottom:19px}
+    @media(max-width:620px){
+      .hero .visual.hero-map:before{width:246px;height:246px;top:53%}
+      .hero-map-program{left:50%;top:53%}
+      .hero-map-card:nth-child(2){left:50%;top:calc(53% - 123px);transform:translateX(-50%)}
+      .hero-map-card:nth-child(2):hover{transform:translate(-50%,-3px)}
+      .hero-map-card:nth-child(3){left:calc(50% - 141px);right:auto;bottom:24px}
+      .hero-map-card:nth-child(4){right:calc(50% - 141px);left:auto;bottom:24px}
+    }
+
+</style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
