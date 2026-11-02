@@ -426,7 +426,7 @@
     <nav class="links" id="navLinks" aria-label="Main navigation">
       <a href="author-en.html">About the Founder</a><a href="#about">About the Project</a><a href="#programs">Educational Programme</a><a href="#directions">Areas of Work</a><a href="#approach">Our Approach</a><a href="#collaboration">Contact</a>
     </nav>
-    <a class="nav-cta" href="#collaboration">Collaboration ↗</a>
+    <a class="nav-cta" href="#collaboration" data-request-type="Programme participation">Enrol for Training ↗</a>
     <div class="language-switch" aria-label="Choose language"><a href="index.html" lang="ru" aria-label="Русская версия">RU</a><span aria-hidden="true">|</span><a href="en.html" lang="en" aria-current="page" aria-label="English version">EN</a></div>
   </div>
 </header>
@@ -713,7 +713,19 @@
   const requestType=document.getElementById('request-type');
   const groupFields=[...document.querySelectorAll('.group-field')];
   function updateGroupFields(){const group=requestType.value===(document.documentElement.lang==='ru'?'Обучение для организации':'Training for an organisation');groupFields.forEach(label=>{label.hidden=!group;const input=label.querySelector('input');input.required=group;});}
-  document.querySelectorAll('[data-request-type]').forEach(button=>button.addEventListener('click',()=>{requestType.value=button.dataset.requestType;updateGroupFields();}));
+  function showApplicationForm(type){
+    if(type)requestType.value=type;
+    updateGroupFields();
+    applicationForm.hidden=false;
+    formButton.setAttribute('aria-expanded','true');
+    formButton.textContent='Hide form';
+    history.pushState(null,'','#collaboration');
+    applicationForm.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+  document.querySelectorAll('[data-request-type]').forEach(button=>button.addEventListener('click',event=>{
+    event.preventDefault();
+    showApplicationForm(button.dataset.requestType);
+  }));
   requestType.addEventListener('change',updateGroupFields);
   updateGroupFields();
   applicationForm.addEventListener('submit',async event=>{
